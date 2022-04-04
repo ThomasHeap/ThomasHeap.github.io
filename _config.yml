@@ -85,8 +85,8 @@ author:
   bio              : "PhD student in Bayesian Machine Learning at University of Bristol"
   location         : "UK"
   employer         :
-  pubmed           : ""
-  googlescholar    : ""
+  pubmed           : 
+  googlescholar    : 
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
