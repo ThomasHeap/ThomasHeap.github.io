@@ -1,7 +1,7 @@
 # main links links
-# main:
-#   - title: "Publications"
-#     url: /publications/
+main:
+  - title: "DL Theory Reading Group"
+    url: /DLTRG/
 
 #   - title: "Talks"
 #     url: /talks/    
