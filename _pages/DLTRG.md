@@ -11,8 +11,10 @@ author_profile: true
 
 | Date            | Paper                                                                                  | Resources  |
 | --------------- |:--------------------------------------------------------------------------------------: |:----------:|
-| 06/07/2022      | Principles of Deep Learning Theory Chapters 1 & 2                                      | https://deeplearningtheory.com/  [Chapter 1](ThomasHeap.github.io/files/Deep%20Learning%20Theory/Principles%20of%20Deep%20Learning/Chapter%201%20-%20Gaussian%20Integrals%20and%20Nearly-Gaussian%20Distributions.md) [Chapter 2](ThomasHeap.github.io/files/Deep%20Learning%20Theory/Principles%20of%20Deep%20Learning/Chapter%202%20-%20Neural%20Networks.md)|
-| 20/07/2022      | PoDLT Chapter 3                                                                        | https://deeplearningtheory.com/ [Chapter 3](ThomasHeap.github.io/files/Deep%20Learning%20Theory/Principles%20of%20Deep%20Learning/Chapter%203%20-%20Effective%20Theory%20of%20Deep%20Linear%20Networks%20at%20Initialization.md)|
+| 06/07/2022      | [Principles of Deep Learning Theory](https://deeplearningtheory.com/) Chapters 1 & 2                                      |  [Chapter 1](ThomasHeap.github.io/files/Pdfs/PoDLT/Chapter1.pdf) [Chapter 2](ThomasHeap.github.io/files/Pdfs/PoDLT/Chapter2.pdf)|
+| 20/07/2022      | [PoDLT](https://deeplearningtheory.com/) Chapter 3                                                                        | https://deeplearningtheory.com/ [Chapter 3](ThomasHeap.github.io/files/Pdfs/PoDLT/Chapter3.pdf) [Chapter 4](ThomasHeap.github.io/files/Pdfs/PoDLT/Chapter4.pdf)|
 | 27/07/2022      | We decided to change approach and read papers                                          |     |
-| 03/08/2022      | Neural Tangent Kernel                                                                  | https://rajatvd.github.io/NTK/  |
-| 17/08/2022      | Multilayer Feedforward Networks are Universal Approximators                            | [Notes](ThomasHeap.github.io/files/Deep%20Learning%20Theory/Multilayer%20Feedforward%20Networks%20are%20Universal%20Approximators.md)  |
+| 03/08/2022      | [Neural Tangent Kernel](https://arxiv.org/abs/1806.07572)                                                                  | https://rajatvd.github.io/NTK/  [Notes](ThomasHeap.github.io/files/Pdfs/Neural_Tangent_Kernel.pdf)|
+| 17/08/2022      | [Multilayer Feedforward Networks are Universal Approximators](https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf)                           | [Notes](ThomasHeap.github.io/files/Pdfs/Multilayer_Feedforward_Networks_are_Universal_Approximators.pdf)  |
+| 31/08/2022      | [Explaining Neural Scaling Laws](https://arxiv.org/abs/2102.06701)                                                         |   |
+| 22/09/2022      | [Git Re-Basin](https://arxiv.org/abs/2209.04836)                                                        |   |
