@@ -18,3 +18,4 @@ author_profile: true
 | 17/08/2022      | [Multilayer Feedforward Networks are Universal Approximators](https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf)                           | [Notes](https://thomasheap.github.io/files/Pdfs/Multilayer_Feedforward_Networks_are_Universal_Approximators.pdf)  |
 | 31/08/2022      | [Explaining Neural Scaling Laws](https://arxiv.org/abs/2102.06701)                                                         |   |
 | 22/09/2022      | [Git Re-Basin](https://arxiv.org/abs/2209.04836)                                                        |   |
+| 05/10/2022      | [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/abs/1906.10652)                 |[Notes](https://thomasheap.github.io/files/Pdfs/Monte_Carlo_Gradient_Estimation_in_Machine_Learning.pdf)   |
