@@ -20,3 +20,8 @@ author_profile: true
 | 22/09/2022      | [Git Re-Basin](https://arxiv.org/abs/2209.04836)                                                        |   |
 | 05/10/2022      | [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/abs/1906.10652)    Section 4             |[Notes](https://thomasheap.github.io/files/Pdfs/Monte_Carlo_Gradient_Estimation_in_Machine_Learning.pdf)    |
 | 12/10/2022      | [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/abs/1906.10652) Section 5                 |[Notes](https://thomasheap.github.io/files/Pdfs/Monte_Carlo_Gradient_Estimation_in_Machine_Learning.pdf)    |
+| 19/10/2022      | [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/abs/1906.10652) Section 7...                |[Notes](https://thomasheap.github.io/files/Pdfs/Monte_Carlo_Gradient_Estimation_in_Machine_Learning.pdf)    |
+| 26/10/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 1,2 & 3                 |[Notes](https://thomasheap.github.io/files/Pdfs/ToyModelsofSuperposition.pdf)    |
+| 16/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 4,5 & 6  | |
+| 23/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 7,8 & 9,10  | |
+| 30/11/2022      | [Gradient Estimation with Discrete Stein Operators](https://openreview.net/forum?id=I1mkUkaguP))  | |
