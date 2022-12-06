@@ -24,4 +24,4 @@ author_profile: true
 | 26/10/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 1,2 & 3                 |[Notes](https://thomasheap.github.io/files/Pdfs/ToyModelsofSuperposition.pdf)    |
 | 16/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 4,5 & 6  | |
 | 23/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 7,8 & 9,10  | |
-| 30/11/2022      | [Gradient Estimation with Discrete Stein Operators](https://openreview.net/forum?id=I1mkUkaguP))  | |
+| 30/11/2022      | [Gradient Estimation with Discrete Stein Operators](https://openreview.net/forum?id=I1mkUkaguP)  | |
