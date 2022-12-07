@@ -25,3 +25,4 @@ author_profile: true
 | 16/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 4,5 & 6  | |
 | 23/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 7,8 & 9,10  | |
 | 30/11/2022      | [Gradient Estimation with Discrete Stein Operators](https://openreview.net/forum?id=I1mkUkaguP)  | |
+| 07/12/2022      | [Exact learning dynamics of deep linear networks with prior knowledge](https://openreview.net/forum?id=lJx2vng-KiC)  | |
