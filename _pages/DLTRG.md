@@ -26,8 +26,5 @@ author_profile: true
 | 23/11/2022      | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) Section 7,8 & 9,10  | |
 | 30/11/2022      | [Gradient Estimation with Discrete Stein Operators](https://openreview.net/forum?id=I1mkUkaguP)  | |
 | 07/12/2022      | [Exact learning dynamics of deep linear networks with prior knowledge](https://openreview.net/forum?id=lJx2vng-KiC)  | |
-| 04/01/2023      | [Neural networks and physical systems with emergent collective
-computational abilities (Hopfield Networks)][(https://openreview.net/forum?id=lJx2vng-KiC](https://authors.library.caltech.edu/7427/1/HOPpnas82.pdf))  |[Notes](https://thomasheap.github.io/files/Pdfs/hopfield_networks.pdf)|
-| 11/01/2023      | [CSC2541 Winter 2022
-Topics in Machine Learning:
-Neural Net Training Dynamics][(https://openreview.net/forum?id=lJx2vng-KiC]([https://authors.library.caltech.edu/7427/1/HOPpnas82.pdf](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L01_intro.pdf))) Lecture 1 ||
+| 04/01/2023      | [Neural networks and physical systems with emergent collective computational abilities (Hopfield Networks)][(https://openreview.net/forum?id=lJx2vng-KiC](https://authors.library.caltech.edu/7427/1/HOPpnas82.pdf))  |[Notes](https://thomasheap.github.io/files/Pdfs/hopfield_networks.pdf)|
+| 11/01/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics][(https://openreview.net/forum?id=lJx2vng-KiC]([https://authors.library.caltech.edu/7427/1/HOPpnas82.pdf](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L01_intro.pdf))) Lecture 1 ||
