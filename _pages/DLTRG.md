@@ -28,3 +28,11 @@ author_profile: true
 | 07/12/2022      | [Exact learning dynamics of deep linear networks with prior knowledge](https://openreview.net/forum?id=lJx2vng-KiC)  | |
 | 04/01/2023      | [Neural networks and physical systems with emergent collective computational abilities (Hopfield Networks)](https://authors.library.caltech.edu/7427/1/HOPpnas82.pdf)  |[Notes](https://thomasheap.github.io/files/Pdfs/hopfield_networks.pdf)|
 | 11/01/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L01_intro.pdf) Lecture 1 ||
+| 18/01/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L02_Taylor_approximations.pdf) Lecture 2 ||
+| 11/01/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L03_metrics.pdf) Lecture 3 ||
+| 25/01/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L04_second_order.pdf) Lecture 4 ||
+| 01/02/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L05_normalization.pdf) Lecture 5 ||
+| 15/03/2023      | [Understanding the Diffusion Objective as a Weighted Integral of ELBOs](https://arxiv.org/abs/2303.00848) ||
+| 22/03/2023      | [Laplace Redux -- Effortless Bayesian Deep Learning](https://arxiv.org/abs/2106.14806)||
+| 12/04/2023      | [Sigma-Reparam: Stable Transformer Training with Spectral Reparametrization](https://openreview.net/forum?id=QwqxO8URJzn)||
+
