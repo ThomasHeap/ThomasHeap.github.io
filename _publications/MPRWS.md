@@ -16,4 +16,3 @@ Here, we develop massively parallel RWS, which circumvents this issue by drawing
 While reasoning about $K^n$ combinations might seem intractable, the required computations can be performed in polynomial time by exploiting conditional independencies in the generative model.
 We show considerable improvements over standard "global" RWS, which draws $K$ samples from the full joint.
 
-https://arxiv.org/abs/2305.11022
