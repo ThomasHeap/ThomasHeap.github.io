@@ -2,7 +2,7 @@
 title: "Massively Parallel Reweighted Wake-Sleep"
 collection: publications
 permalink: /publication/MPRWS
-date: 2009-10-01
+date: 2023
 venue: 'UAI'
 paperurl: 'https://arxiv.org/abs/2305.11022f'
 
