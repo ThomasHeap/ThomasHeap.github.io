@@ -34,6 +34,7 @@ author_profile: true
 | 01/02/2023      | [CSC2541 Winter 2022 Topics in Machine Learning: Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2022/readings/L05_normalization.pdf) Lecture 5 ||
 | 15/03/2023      | [Understanding the Diffusion Objective as a Weighted Integral of ELBOs](https://arxiv.org/abs/2303.00848) ||
 | 22/03/2023      | [Laplace Redux -- Effortless Bayesian Deep Learning](https://arxiv.org/abs/2106.14806)||
+| 29/03/2023      | [A Theory on Adam Instability in Large-Scale Machine Learning](https://arxiv.org/pdf/2304.09871.pdf)||
 | 12/04/2023      | [Sigma-Reparam: Stable Transformer Training with Spectral Reparametrization](https://openreview.net/forum?id=QwqxO8URJzn)||
 | 24/05/2023      | [Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning](https://arxiv.org/abs/2303.10512)||
-| 29/05/2023      | [Loss Landscapes are All You Need](https://openreview.net/forum?id=QC10RmRbZy9)||
+| 29/05/2023      | [Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training](https://arxiv.org/abs/2305.14342)||
