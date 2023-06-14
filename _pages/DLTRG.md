@@ -37,4 +37,5 @@ author_profile: true
 | 29/03/2023      | [A Theory on Adam Instability in Large-Scale Machine Learning](https://arxiv.org/pdf/2304.09871.pdf)||
 | 12/04/2023      | [Sigma-Reparam: Stable Transformer Training with Spectral Reparametrization](https://openreview.net/forum?id=QwqxO8URJzn)||
 | 24/05/2023      | [Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning](https://arxiv.org/abs/2303.10512)||
-| 29/05/2023      | [Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training](https://arxiv.org/abs/2305.14342)||
+| 7/06/2023      | [Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training](https://arxiv.org/abs/2305.14342)||
+| 14/06/2023      | [QLORA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/pdf/2305.14314.pdf)||
