@@ -37,7 +37,9 @@ author_profile: true
 | 29/03/2023      | [A Theory on Adam Instability in Large-Scale Machine Learning](https://arxiv.org/pdf/2304.09871.pdf)||
 | 12/04/2023      | [Sigma-Reparam: Stable Transformer Training with Spectral Reparametrization](https://openreview.net/forum?id=QwqxO8URJzn)||
 | 24/05/2023      | [Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning](https://arxiv.org/abs/2303.10512)||
+| 31/05/2023      | [Loss Landscapes are All You Need: Neural Network Generalization Can Be Explained Without the Implicit Bias of Gradient Descent ](https://openreview.net/pdf?id=QC10RmRbZy9)||
 | 7/06/2023      | [Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training](https://arxiv.org/abs/2305.14342)||
 | 14/06/2023      | [QLORA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/pdf/2305.14314.pdf)||
 |09/08/2023        | [Limitations of the Empirical Fisher Approximation for Natural Gradient Descent](https://arxiv.org/abs/1905.12558)||
 | 23/08/2023      | [The No Free Lunch Theorem, Kolmogorov Complexity, and the Role of Inductive Biases in Machine Learning](https://arxiv.org/abs/2304.05366)||
+| 20/09/2023      | [Transformers as Support Vector Machines](https://arxiv.org/abs/2308.16898)||
