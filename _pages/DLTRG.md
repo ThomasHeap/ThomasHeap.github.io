@@ -43,3 +43,4 @@ author_profile: true
 |09/08/2023        | [Limitations of the Empirical Fisher Approximation for Natural Gradient Descent](https://arxiv.org/abs/1905.12558)||
 | 23/08/2023      | [The No Free Lunch Theorem, Kolmogorov Complexity, and the Role of Inductive Biases in Machine Learning](https://arxiv.org/abs/2304.05366)||
 | 20/09/2023      | [Transformers as Support Vector Machines](https://arxiv.org/abs/2308.16898)||
+| 27/09/2023      | [Flat Minima](https://www.bioinf.jku.at/publications/older/3304.pdf)||
