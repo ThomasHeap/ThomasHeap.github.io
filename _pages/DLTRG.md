@@ -45,3 +45,4 @@ author_profile: true
 | 20/09/2023      | [Transformers as Support Vector Machines](https://arxiv.org/abs/2308.16898)||
 | 27/09/2023      | [Flat Minima](https://www.bioinf.jku.at/publications/older/3304.pdf)||
 | 04/10/2023      | [Language Modeling Is Compression](https://arxiv.org/abs/2309.10668) ||
+| 11/10/2023      | [Efficient Streaming Language Models with Attention Sinks](https://arxiv.org/abs/2309.17453)) ||
