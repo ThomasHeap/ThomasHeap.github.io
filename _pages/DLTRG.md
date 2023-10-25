@@ -7,6 +7,11 @@ author_profile: true
 
 {% include base_path %}
 
+
+## Rota
+Ben, Tom, Maxime
+
+
 ## Schedule
 
 | Date            | Paper                                                                                  | Resources  |
