@@ -47,3 +47,4 @@ author_profile: true
 | 04/10/2023      | [Language Modeling Is Compression](https://arxiv.org/abs/2309.10668) ||
 | 11/10/2023      | [Efficient Streaming Language Models with Attention Sinks](https://arxiv.org/abs/2309.17453) ||
 | 18/10/2023      | [Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning](https://arxiv.org/abs/2303.10512) ||
+| 25/10/2023      | [SGPT: GPT Sentence Embeddings for Semantic Search](https://arxiv.org/abs/2202.08904) ||
