@@ -51,7 +51,6 @@ Ben, Tom, Maxime
 | 27/09/2023      | [Flat Minima](https://www.bioinf.jku.at/publications/older/3304.pdf)||
 | 04/10/2023      | [Language Modeling Is Compression](https://arxiv.org/abs/2309.10668) ||
 | 11/10/2023      | [Efficient Streaming Language Models with Attention Sinks](https://arxiv.org/abs/2309.17453) ||
-| 18/10/2023      | [Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning](https://arxiv.org/abs/2303.10512) ||
 | 25/10/2023      | [SGPT: GPT Sentence Embeddings for Semantic Search](https://arxiv.org/abs/2202.08904) ||
 | 01/11/2023      | [Adam through a Second-Order Lens](https://arxiv.org/abs/2310.14963) ||
 | 08/11/2023      | [Maximum a Posteriori Policy Optimisation](https://arxiv.org/abs/1806.06920) ||
