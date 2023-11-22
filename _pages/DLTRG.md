@@ -54,3 +54,4 @@ Ben, Tom, Maxime
 | 25/10/2023      | [SGPT: GPT Sentence Embeddings for Semantic Search](https://arxiv.org/abs/2202.08904) ||
 | 01/11/2023      | [Adam through a Second-Order Lens](https://arxiv.org/abs/2310.14963) ||
 | 08/11/2023      | [Maximum a Posteriori Policy Optimisation](https://arxiv.org/abs/1806.06920) ||
+| 22/11/2023      | [Simplifying Transformer Blocks](https://arxiv.org/abs/2311.01906) ||
