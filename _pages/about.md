@@ -17,4 +17,4 @@ In addition to this primary line of enquiry I am interested in:
 * Deep learning theory
 * Bayesian Machine learning more generally
 
-Before starting my PhD I worked in industry on speech recognition for fraud detection.
+Before starting my PhD I worked in industry most recently on speech recognition for fraud detection.
