@@ -55,3 +55,4 @@ Ben, Tom, Maxime
 | 01/11/2023      | [Adam through a Second-Order Lens](https://arxiv.org/abs/2310.14963) ||
 | 08/11/2023      | [Maximum a Posteriori Policy Optimisation](https://arxiv.org/abs/1806.06920) ||
 | 22/11/2023      | [Simplifying Transformer Blocks](https://arxiv.org/abs/2311.01906) ||
+| 29/11/2023      | [The Shaped Transformer: Attention Models in the Infinite Depth-and-Width Limit](https://arxiv.org/abs/2306.17759) ||
