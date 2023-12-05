@@ -10,5 +10,5 @@ author_profile: False
 {% include base_path %}
 
 {% for csv in site.csv %}
-  csv.path
+  {{ csv.path }}
 {% endfor %}
