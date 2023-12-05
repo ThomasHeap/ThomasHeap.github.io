@@ -1,0 +1,562 @@
+start,end,text
+0.0,9.8, Hello and welcome to GFW Radio again this is number two of three today and we have some very very special guests with us and we're also happy to have them here
+10.8,13.8," Right of course, okay, okay, okay, then"
+15.0,17.0, I'm sorry
+17.0,19.0," All right, and who are you guys?"
+20.0,21.0, You mean you don't know?
+21.0,25.0, I've never seen you before. I don't know who you are. I'm kind of retarded
+25.0,32.4, So I'm Kim Swift and I was a level designer in portal and I'm Eric will pawn I was a writer on portal
+33.0,38.8, First fucking grad so we heard you won like some bigger word less-night at GBC here. We did the innovation award
+40.0,48.64," Well, we won and also again, did you get gaming the innovation award and a best game design? Yes, yeah, right on you sound unfazed"
+49.64,53.24, I'm honestly I'm running on three hours asleep right now
+53.64,56.64, I'm kind of tired. Are you keeping count of all the words?
+57.64,64.64," No, not really. I mean it's like it's yeah, yeah, I don't really get how game that's so short"
+64.64,69.44, Did you game it the year? I know it seems unfair. We're kind of confused too. Yeah
+70.64,73.64," It was our game in the year in case you didn't know it was like oh, was it?"
+73.64,80.64," So I'm just bullshit. Well, thank you. Well, you you guys I actually think that that that maybe that helps because"
+81.64,87.64," Everybody I know who's an adult which is I mean that's all I hang out with mostly adults. Yeah, yeah, and not anymore"
+88.64,91.64," Yeah, last but not yes, but legally not allowed"
+93.64,95.64, But the
+96.64,104.64, Nobody finishes games anymore. Everybody I know I mean who isn't a kid. They don't have time to finish games and and if you play portal
+104.64,108.64, You can pretty much finish it. I think right right there that was just this huge
+109.64,116.64, Gaping hole in game experience was a good game that people could actually play from beginning to end and not you know have to take 20 hours to do it
+117.64,123.64," Yeah, you can just sit down on one afternoon and get the entire experience. What was that really what if your goals or what if your ideas"
+123.64,129.64," But was that in there? It looks make a short game. I don't know that we talked about it, but I mean short game equal less work"
+130.64,131.64, Me
+131.64,137.64," Yes, I'm like, if you had a choice at work, like can I just wear two hours today or eight hours"
+138.64,142.64," Go for you. We want to make shorter magazines. Yeah, that's a way to know"
+143.64,152.64," Yeah, but I mean, that's something you know in terms of like adult themes one of the major adult themes I want to do address was that you know adults are busy"
+153.64,159.64, People that don't have 20 hours to play portal. So try and get them in and out in four hours and give them a nice satisfying experience
+160.64,171.64," And honestly, like the length like it wasn't that pre-meditated. It sort of came out, you know, we have this you know play testing policy where we you know have people sit down and play our game every week"
+172.64,179.64, We watch them play from beginning to end and you know we found that you know using these play tests to tune our game
+179.64,189.64, Like we just found that was sort of like the sweet spot where people you know sort of got a good crescendo with the plot and and you know they felt like they were very confident you know using the gameplay
+190.64,195.64, At the end of the game and we just felt it was a good place to leave off rather than putting in a whole bunch of filler
+196.64,204.64, Didn't you have another section of the game that you cut I'm kind of remembering from Sean's post-mortem with you guys that you ended up leaving on the cutting room floor
+204.64,206.64," Yeah, we had a couple rooms"
+207.64,218.64, Initially we wanted the escape sequence to be a little bit earlier and then we were gonna actually have you go back into the test chambers and then you know escape again and you know for pacing purposes
+219.64,225.64, It wasn't really that great and we just sort of cut the levels because we didn't really find that the gameplay was that great
+226.64,233.64," So you're like alright, we could try and polish this but you know, we'd much rather work on our boss battle. So we went to that"
+234.64,240.64, I want to go back a second to when you launched the game because I heard you had a Mr. Rubegolder help you actually put the game on steam
+241.64,248.64," I don't know if that makes sense, but you had some contraption. Oh, yeah, oh, yeah, the buttons and switches and stuff"
+249.64,251.64," It was crazy. Yeah, was it somebody built a giant control panel"
+252.64,256.64," Oh, Chris Green building. I thought Chris Green and Chris Green stood like together"
+256.64,263.64," Okay, so anyway, some people at Valve built a giant control panel and because we launched stuff on steam"
+263.64,273.64, There was you know it uses the three key unlocking thing and at midnight on that night the entire company was there and gave or Kim and Robin and Charlie
+274.64,277.64," Yeah, me it means fire and I think Robin"
+278.64,281.64," Anyway, it was awesome that there was like dry ice coming out of the thing"
+281.64,286.64, I mean it's just like a rocket launch and they turned the three keys and hit the button and actually sent the game live
+286.64,294.64, I heard this really weird like free-masonry version of it where Jim you're you're you're called up there and you go and you pull a lever
+295.64,298.64, Representing a portal and then the Robert or so
+299.64,305.64," Yeah, yeah, it was like represented each of the games there were so many people there couldn't I couldn't actually see over the heads to see"
+306.64,313.64, But did it also have this element where the the dries would do something that would set something else in motion and when the third lever was pulled
+313.64,318.64, The way that it worked out is that it basically ended up flipping the switch and uploading the game to
+319.64,325.64," You know, this is what the game actually went up when Gabe hit the big red button"
+325.64,329.64, We always had this joke around the office that we need to launch our games with the big red button
+329.64,331.64, So like that's kind of how it all came about
+332.64,338.64," But yeah, each one of the switches did something else like they think one of the keys like turned on the dry ice"
+338.64,343.64, And then another turned on like strobe lights and just a bunch of other things
+344.64,354.64," Yeah, that's the tape exists the box the elaborate box was a new thing but the everybody gathering together to hit the button to launch it on steam is a valve tradition"
+354.64,359.64, I mean for episode one they did a day of defeat the problem. I mean it probably dates back to half-life to them
+359.64,364.64, I mean it wasn't nearly as traumatic like we kind of gathered and in somebody's room while I pressed the engine
+364.64,372.64," Yeah, but no with this time it was dramatic and next time it'll be right over drying the cynic wants to know that you didn't eat cake at that moment"
+373.64,381.64," Hit him up. Yeah, we actually I don't think we had cake. We had no cake. We were way ahead of the curve on being sick of the cake jokes by that"
+382.64,385.64," That was for you. Yeah, no, I mean it's"
+386.64,397.64," Though we have been sent several cakes. Oh, no, yeah, so that's been read. That's made come full circle and now been read the backlash backlash and what level we're at"
+397.64,404.64, But somebody brought the other day companion cube cake into valve. This was just last week
+404.64,410.64," Yeah, but it was beautiful. I mean a beautiful beautiful. Especially done made it like fondant and they were in their whites"
+410.64,416.64," And I was you know, I'm super excited and they're like, you know, we love the game and you know, I'm kind of like, oh well whatever"
+416.64,424.64," Just give me that cake, but then yeah, I was so glad. But then one of the guys is like I'm like, you know, I really I"
+424.64,430.64," I light cakes. I like watching this show on the food network called Ace of Cakes and he's like, I'm on that show"
+430.64,435.64," And all of a sudden it was like this total roll reversal is like, I can't believe you're on Ace of Cakes"
+436.64,450.64," Oh, I got a chain my hand again. It's awesome cake though. Were there any major blades and no, no, that yeah, it's a PVC pipes that'll like hold it up. Yeah, I was cheating. Yeah, they they"
+450.64,463.64," No, no, no, no, no, no, no, there was a sharp like a plastic thing that sort of like helped support. Oh, I it was just like 50, 20, he didn't boss. Yeah, it wasn't it was a good"
+463.64,470.44," Yeah, that was the first thing my wife said was it so somebody came off the street and dropped off a cake and you guys just dated"
+472.44,478.24, We all died. This is a common that valve needs to employ like a royal like a taster
+478.24,484.64," You know, we should have something like that there was one other group brought in a cake a companion cute cake"
+484.64,490.12, There weren't professionals it was but it I mean the it was almost as good as the professional one was a little bit
+490.12,496.6, Lobs and put it I mean it was a critical VC you guys had a ton of time to to make the game and you know
+496.6,502.32, Traditionally from what I understand the way that valve you know design process works you you you're able to iterate tweak and whatnot
+502.32,507.72, But when all was said and done there's anything that you regretted about the game or really just wish you had been able to do
+508.72,513.48," No, I I'm pretty satisfied. Yeah, I mean it'd be pretty much sour"
+513.48,517.5, Griefs at this point to complain too much if I'd one thing
+517.64,522.96, You know when you take the cameras off the wall and she reacts to that if we had had a little bit more
+523.28,526.88, I'd one like absolutely wish you would be to put more of that sort of interactive
+528.04,533.84, Responses to things that you do in the world in there with gladis like things that you could do to piss her off
+533.84,537.12," Yeah, things that you could do to make her a little bit more angry"
+537.6,543.4, But other not I think it every every your most precious gags got in there
+544.2,550.6," Some of them didn't make it in there, but usually they were only precious because I liked them and everything they didn't make them in because they were bad"
+550.9200000000001,555.12, Or we didn't have any time like we were running in a couple of them sort of like at the last minute
+555.12,560.0," I'm like you're kidding here. I have a get oh, that's my biggest regret. No, I do have a huge regret"
+560.28,566.52," Yeah, yeah, I'm actually still kind of mad about this should have come like a month earlier and told there's a"
+567.04,573.26," I didn't notice this till the very last like week, but there's a chamber where you go in and there's this"
+573.26,576.04, I don't know the exact where she says something about it being a
+577.92,583.4, Testing course for military androids or something and it really was supposed to be like a level
+583.4,586.24, I mean in my head in in the world of my imagination
+586.24,591.16, That's what actually what it was but the signage was still people right?
+591.16,596.1999999999999, It was still like people in there and I didn't notice that till like a week before and the
+596.1999999999999,601.0799999999999, Perf I had the perfect solution which is take the round part off the people head and put a square head on it
+601.0799999999999,606.16, And it'll be it'll make it seem like it's an android but apparently I had too much to do
+608.0799999999999,614.3199999999999, Change this right again when you ruin our next game
+616.88,619.12, That's like three game of the year or a few costs
+620.04,627.48, Did you guys this is probably gonna ask before but did you guys have any inkling the portal was gonna be kind of a standout game of that
+628.96,632.12, Train it up no I mean it's not even like just
+632.36,636.16, Modesty you just you mean you you look at it and think it's pretty good
+636.16,639.84, I mean I remember when Sean came to play at the first time you were like one of the first people to play it
+639.84,643.2, I'm like man this could this could go really poorly
+643.2,645.2, So interesting yeah
+646.2,651.2, I was just playing it. I was either taking a break red just finished or something and I mean of course
+651.2,652.2, You know you're not gonna ask me
+652.2,656.2, You know right I know I know not the be like it was like so weird. You're just you know
+656.2,658.2, Here's a guy just going around and I was like
+658.6400000000001,661.8000000000001, Wow like that guy made one of the coolest things I've ever played
+661.8000000000001,665.76, But I can't talk about it back from that visit and he was telling us about it
+665.76,669.6400000000001, And I think we are like everybody else in that the other games in the orange box
+669.64,672.98, We're just so much more high profile as long as like you guys have to see
+672.98,677.4, I was like what is that is I'm a demo we didn't even know I'm a break
+677.4,681.04, I was like texting Ryan or Donald from the one up show and it was just like oh shit
+681.04,685.84, You don't even know because he was like easy to use a big fan of like episode
+685.84,688.64, You know the half-life series stuff as well and VALST
+688.64,693.68, And it's a writer I'm kind of curious if you stockpile material that this is like kind of like orphaned
+693.68,698.12, You're just looking for the right home for this right game for yeah every day so I walked to work every day
+699.64,704.52, I make sure I take like an hour and a half and I think about stuff and I spend like the first half hour of the day
+704.52,708.72, Just sort of transcribing things into a big note file and then I'm always like
+709.08,713.84, Looking through the note file to try and pull out words and phrases that I can like put somewhere else
+713.84,718.12, Or if I'm reading something I just constantly cutting and pasting stuff whenever I read something that might
+718.6,720.76, Someday be able to be useful somewhere
+720.76,723.88, I've just got this giant giant like four or five
+724.4399999999999,727.36, dates back to psychonauts now. It's like you know a six-year-old
+727.96,732.16, Giant text file and every time I use something like deleted out and it
+732.16,736.4399999999999, Then sometimes you see you then then you're sitting down for a project like portal and all of a sudden you're like
+737.0,741.16," I've been sitting on this thing for three years. It's gonna. Yes, like years ago"
+741.16,745.52, I found this thing was when I was working on psychonauts for some reason I stuck it in the note file
+745.52,747.0, It was a declassified
+747.4,750.62, Government interrogation manual. I just thought had a lot of neat phrase
+750.62,755.24, Allot phraseology in it the way that they talked about things and boom has totally
+755.72,760.28, Eventually able to pull it out and in the the companion cube level has some actual like stuff
+760.28,762.68, I lifted directly from that the something about
+764.16,766.16, Becoming
+766.16,770.4, I don't even know if it's something about becoming attached to inanimate objects or prolonged
+771.36,779.0," Plasticity to the companions something like that anyway, so that that came right out of that like more file that I keep"
+779.76,782.76, It's super duper helpful cool
+783.12,789.64, Do you know that the a companion keeps showed up in World Warcraft recently? I did I saw that that's like the greatest honor
+789.64,795.96," Yeah, you can you can have that was awesome. Is it or is that make World Warcraft where jokes go to die? Oh my god?"
+795.96,799.84, It's like now World Warcraft's like the YTM and the MMOs. It's a law cat
+800.48,804.8," But it was a big lock. Yeah, but it was just a little thing wasn't like they just sort of"
+806.0799999999999,811.8," Yeah, oh my brief don't they they take it down. Did they take it down? It was probably time state. Yeah, all right"
+811.8,818.56, It's put hearts on the crates. I was wondering didn't the original team besides Eric for portal came from
+819.12,825.96, All the all-digit pen students right did did portal start as a as a project for the GDC independent games festival
+825.96,827.96, So initially it started out
+828.32,833.58, We were all students of digipen and for our senior year project we created a game called their
+833.58,836.36," Bacular drop, which is the predecessor to portal essentially and"
+837.6800000000001,841.44, How we got hired on was you know every year
+841.96,846.88, Digipen has an expo where they bring in a bunch of game developers take like a student's projects and
+847.5600000000001,855.44, Valve came by and saw you know our game and invited us to come in to the studio and and
+855.96,857.96, Show it to Gabe and he
+858.84,862.0, Literally hired us on the spot after we demoed the game and
+863.12,864.12, You know
+864.12,864.84, I
+864.84,871.5200000000001," Came in as grand slam first time out of that gate there. Yeah, yeah, it was pretty weird. I gave it like the Willy walk of"
+872.08,874.08, Gaming
+877.5200000000001,879.5200000000001, He invited you
+880.1600000000001,883.7600000000001, He Charlie all these other guys wanting here. You're coming in
+884.72,889.3, So what's it like now that your first retail game right is winning all these awards and it's being like
+889.3,893.14," I mean just universally well received. Well, it's it's amazing really"
+894.06,896.06, I mean you don't really focus on
+896.34,900.62," Thinking about oh, you know are we gonna win awards or it's more you know"
+900.62,905.56, Here's here's his baby that we were working on for a long time and you know
+905.56,911.46, I hope people like it man. I really hope people like it otherwise that'd be really depressing but I mean
+912.1,919.22, Honestly just during the development we really wanted to focus on our players and make sure that they were having a great time playing the game
+919.22,921.22, So guess it paid off
+921.94,929.74, Have you guys checked out any of the the student and Andy games a GDC this year like in the at the Andy games festival
+930.26,933.26, Aircats. I wanted to after I've been on like
+933.82,936.9000000000001," Sort of the interview circuit this morning, but as soon as like that's over"
+936.9000000000001,939.7, I was gonna go check it out and then take an app
+939.86,941.86," Yeah, it's a bunch of my team before"
+943.5,947.8000000000001, I'm in the beta for world of goo and that game is really cool if you can just be
+949.8000000000001,951.8000000000001, Feds is really neat and
+953.62,960.6400000000001," Those are the two I've actually had hands on time with yeah and audio well audio surface on steam now, but that that was"
+961.12,965.74," That was really fun. Yeah, it was a no-scriptic list thing you played on there like most ridiculous sound file"
+966.54,969.54," On audio serve. Oh, I played the"
+970.72,979.5, So in portal there's this angersphere that is Mike Patton just gonna like that that's actually cut from a three-minute demo
+979.5,982.54, Then he did for left for dead game sound
+986.54,988.54," Yeah, it was"
+988.54,991.54, Yeah
+991.54,998.6999999999999, But it seemed like there was a lot of good stuff this year like I had gone for a few years in a row and this year seems particularly
+999.62,1005.26, Excellent for for a small-time games. It's kind of amazing like you just popped up this
+1006.26,1010.0999999999999," Yeah, professor. No, it's PB winner bottom. Yeah, I"
+1010.1,1015.82," Got a game video that it was me. Yeah, it's this like 2D sort of time dependent like"
+1016.32,1020.34," Right, you're sort of like in a this black and white like silent movie sort of"
+1021.62,1026.18, World but but the gameplay conceit is that you can film yourself
+1026.8600000000001,1032.44, Stopped film yourself and then stop time and then use that film version of yourself to do you know
+1032.44,1036.58, They're like puzzle time puzzles. How could I be in two places or want to sort of stuff?
+1037.3,1039.3," Yeah, what are you guys playing right now?"
+1041.06,1049.2199999999998," Mine's gonna go on for 15 minutes. Yeah, okay. So I was first I haven't had a lot of time to like really sit down and play like a console game or a PC game"
+1049.2199999999998,1053.6999999999998, So I've been mostly doing like you know 10 minutes burst of like the new
+1054.98,1058.7199999999998, It's not Phoenix right it's the apologize this game on the DS
+1063.54,1069.34," And then no, but yeah, I've been super duper addicted to Pat upon for like the last four days"
+1069.34,1074.6599999999999," I got I'm just tired you can hear my voice, but as soon as we're done here"
+1074.6599999999999,1076.98, I'm going back to the hotel and play more pat upon
+1077.74,1081.72, What's a deal with I keep hearing about pat upon it's like I want to saw it
+1082.72,1088.1599999999999, Advertise I thought it was sort of like the art style was the gimmick and it was gonna be sort of this cute quirky
+1089.1799999999998,1093.6999999999998," Japanese game that wouldn't be that interesting, but it's got this crazy like"
+1094.66,1100.78," rhythm strategy RPG element to it, you know, you the rhythm is the actual little battles"
+1100.78,1106.54, But there's sort of some tactics to the battles and then in between there's this whole item collection and army building
+1107.1000000000001,1109.98, mechanic it's kind of like if you played monster hunter ever on the PSP
+1110.5,1112.74," Anyway, there's a little bit of that too where you're always"
+1113.3,1121.18, There's a lot of different battles you can go into and you can keep re-entering them to gain to get more resources and then you combine the resources and you know
+1121.3400000000001,1124.54, Different equipment and different guys for your army
+1124.54,1129.5800000000002, It's just it's totally hits that sweet spot of like a kind of OCD collecting
+1129.5800000000002,1135.38, But it's also really charming and has a neat rhythm mechanic is it the guys that made a
+1136.94,1141.22, Looks like I don't know I think it's coming called pyramid. They really local roco
+1141.22,1145.9," I assume the digits because of the art style of them. Yeah, it's similar a bit for PSP. Yeah"
+1146.38,1147.38, Not not sure
+1147.38,1149.38, I'll go check it out. Is that out?
+1149.6200000000001,1155.5," I don't know you're playing it. Yeah, it's okay. Yeah, it's supposedly it's only 20 bucks too"
+1155.5,1156.8200000000002, Yeah
+1156.8200000000002,1160.42," Oh, is it one of those like download from the PS3 and put it on your PSM?"
+1160.42,1161.9, You think it's a little bit of a three
+1161.9,1164.9," Yeah, I think it's for you to know stars which game Erica"
+1164.9,1172.0200000000002, They came out this past year and pressy the most that use narrative and some some capacity honestly and I
+1172.3000000000002,1174.3000000000002, It gets a lot of
+1175.26,1178.5," It's getting a lot of press, but not it doesn't seem like it's a lot of press for its story"
+1178.5,1181.86, I thought called duty four was really awesome. I mean I felt
+1182.3799999999999,1189.18, It did a lot of like hardcore military story telling that the in a way that was interesting to me
+1189.18,1192.3, That I know like in splinter cell or a lot of most military games
+1192.3,1196.3," I can't you know button through the the cutscenes fast enough, but"
+1196.94,1202.5, Just virtually every part of Call of Duty four worked for me the story had a lot of like interesting twist and
+1203.06,1208.98, Just a you know had that opening train ride scene which I thought was it wasn't actually train ride
+1208.98,1213.58," But you know, yeah, which I thought you know, just ended with this just awesome moment"
+1213.58,1216.22," You know that spoilery, but they're you know"
+1216.22,1221.86, You're waiting to kind of get saved or something to hand is just like this weird grim jaw dropping moment
+1222.7,1228.26," So yeah, from beginning to end I thought Call of Duty four was excellent another short game that was a lot of people who played it"
+1228.26,1229.76, We're able to just finish
+1229.92,1235.66, There's still these weird reactions from people about like the whole game length issue and stuff and I don't know if it's just
+1235.66,1237.66, I mean
+1237.66,1243.56, The set of people that they've grown up playing games with certain expectations are whole life and it's very difficult for them to get around it
+1243.56,1245.06, So you gotta wait for the next generation
+1245.06,1248.48, So an example would be you know the way that death works in games
+1248.48,1254.48, So the fact that we even have it and sometimes you know like these the fail states are basically remnants of you know quarter eating
+1255.0,1257.0, Things like that or
+1257.0,1263.94, the way to save points work and just how long games should be you know all these expectations about what make a game and they're they don't know
+1263.94,1266.26, I mean a lot of them aren't really perfectly suited for
+1266.96,1268.96," The medium in my opinion now, but"
+1269.96,1271.96, It's not like agree
+1273.68,1277.52, And the weird thing is people bit your bet of it's not like portal was a $50 game
+1277.76,1281.88," Well, we we did get hate mail. I mean, I'm still getting it. Oh, yeah in my inbox for"
+1281.88,1286.64," We're sorry, yeah, thanks a lot here fall make a game stronger next time for me"
+1287.16,1293.66," No, but because people saying that that it somehow wasn't worth it hyperbly because that those letters are like enough"
+1293.66,1297.38, You gave it a word to a 15-minute tech demo. It's like oh it's 15 minutes now
+1301.38,1306.6200000000001," It's gonna be sour great video. Yeah, the number does keep goes. I finished it and there are literally like YouTube videos"
+1306.62,1311.5," Guys somehow finishing it in like three minutes. Yeah, like three minutes or something right"
+1311.5,1314.54," Yeah, that was those guys actually wrong like"
+1315.3,1316.9799999999998, 150 hours a pleasure
+1319.3799999999999,1326.1," Yeah, in steam we actually know I mean the it's something like three and a half hours or four hours between like three and four"
+1326.1,1328.1," That's the average yeah, what was your shift?"
+1329.6599999999999,1332.2199999999998, That's still longer than I think on over nine
+1332.22,1337.58," Right, it's a problem and I'm forever saddled with this 13 hour thing because I left it on"
+1337.82,1342.4, It's just I just remember walking into your office and you're sitting there staring at the screen
+1342.4,1343.4, You're like
+1345.4,1347.9, Just not true
+1347.9,1353.58," It's not something worth you got Ryan to play it and he's like first person phobic at this point of view, right?"
+1354.7,1360.3, It is yeah like I kind of have to have a have to be able to see myself
+1360.58,1364.1399999999999, But like you know with portal it's like I couldn't it it wouldn't work that way
+1365.34,1367.2," Yeah, you absolutely could not have that"
+1367.2,1371.58, You got through the most part of your indigenous game in the genre and you didn't get sick. It's so true
+1371.58,1374.94," Oh, you made it all the way through the end. I mean I don't get sick"
+1375.78,1382.1, First person game so many me nauseous or anything it's just like I have this weird like mental block or like I just have to see my character
+1382.1,1384.1, Where am I to see around?
+1386.54,1390.74, With was there playing team for it just two now two team for two. Wow. Let's up at that
+1390.8999999999999,1394.6799999999998, That like I don't know maybe you got no it's your fault maybe
+1395.3799999999999,1399.58," Or does like a different kind of game. Oh, it's like I'm not constantly having to look around me"
+1399.8999999999999,1401.8999999999999, You know I can
+1403.8999999999999,1405.8999999999999, See the video
+1406.62,1408.62, Intense paranoid
+1409.26,1415.4199999999998, Before I like you know portals chill I can take my time. What about my own pace? What about this fantastic
+1416.3,1422.8999999999999, You know like many many movies for team fortress to where those are those going anywhere is that pretty much it just to
+1423.9799999999998,1424.9799999999998, I mean
+1424.9799999999998,1431.86, Not they're not going anywhere other than they're gonna finish up and then we'll see what happens from there
+1431.86,1436.34, But I mean there's definitely no nothing and now it's as far as what what would happen next
+1436.34,1438.62, But we are gonna finish him. I've just been a little
+1439.1,1443.08," Break review and well-din writing this yeah, yeah, it was that again"
+1443.08,1448.86, It was so I would sort of like write a script but most of the good parts are or the animators would take some
+1449.4599999999998,1451.78," crappy line they'd be like well, let's put a bird"
+1451.78,1458.4599999999998, You know back here doing something crazy and they would find some way to frame it to actually make and that that's one of the super depressing things
+1458.4599999999998,1461.8999999999999, Just about working on games for a writer too like even if you write good stuff
+1462.14,1466.38, The animators are always way funnier than you are like you put something in there
+1466.38,1470.18, It was the same way it double find to be like this is some quality material and everybody
+1470.18,1478.26," Yeah, and then the animators would go to it. That's when everybody that's when it actually works when the animators put put their their magic on it"
+1478.26,1480.26, And same with the TF shorts
+1481.0600000000002,1485.02," Well, they were some laugh out loud parts of portal that were just strictly voiceover"
+1485.02,1488.5, So you're able to take credit for that animators probably wrote those
+1489.14,1495.34, I'm curious it in the writing of portal was there a point where it had to be because
+1496.1,1500.7, You said it started as a student project. So did story and stuff get
+1501.62,1508.38, Retrofitted into the Half-Life universe. I counted that part work in which I think honestly originally it was
+1509.66,1511.9, So when we when we started I
+1512.26,1517.74," You know we we got an offer like you know, would you like to place place portal in the half-Life universe or like yeah"
+1517.74,1523.82, Are you kidding and so like that was like pretty much from the outset and
+1524.46,1528.2, The game was actually sort of you know kind of without a story for
+1528.7,1531.82, Maybe like maybe two or three months and
+1532.2,1535.92, You know through a playtest we actually found that the game was kind of dry like people
+1536.04,1540.86, You know enjoy themselves for about 15 to 30 minutes and then they were like okay. I'm done and
+1541.42,1544.66, You know we needed a story to kind of drive players forward
+1544.66,1551.38," That's when Eric came in yeah, and I think honestly in the beginning there was it was sort of a quasi marketing decision"
+1551.38,1553.38, Because they weren't sure exactly
+1553.38,1558.88, What how they were in a market portal and since at that point they were still and even in the end
+1558.88,1563.18, We were using a very we were using Half-Life art assets and even
+1564.26,1566.78, You know it just it looks like it's in the Half-Life universe
+1566.78,1571.9, So it just made sense to put some tie in there and as it started to get its own identity
+1571.9,1576.46, We worried less about you know we we don't have to have the G-Man pop in at any point
+1576.46,1580.1000000000001, And we kind of made it just the more subtle aperture science with a few black Mesa
+1581.1000000000001,1584.38, References and some references to the combine and stuff like that and
+1584.94,1590.8200000000002, That was cool. That's it kind of made it more mysterious. I thought it took on this kind of lost sort of aspect to me
+1590.8200000000002,1593.46, Like does it really fit in how does it fit in yeah?
+1593.46,1599.2800000000002," Some other timeline in the Half-Life universe some of it though. Yeah, some of that's just slop on my part because it actually"
+1599.8,1605.72," Should be clear to you that it does yeah, I haven't done my job right if it does take place in the Half-Life universe"
+1606.96,1608.6," But yeah, and we"
+1609.32,1614.24, Trying to answer as many questions as possible. That's a lot of people are like you know
+1614.24,1618.92, We want to ask more questions than give answers if I had my way the game would answer
+1618.92,1622.6, I would give you every answer you ever needed about anything I mean that would be a life
+1622.6,1626.3999999999999, Right it comes with like an 100% answers all answers
+1626.4,1630.6000000000001," I mean if you had a choice between the game. Oh, I'm asking a lot of questions your game like all your answers are here"
+1630.6000000000001,1632.6000000000001, I picked the all your answers game
+1632.6000000000001,1639.48, Because do you have a lot of the answers and you're not telling I do not and I like most people have a lot more questions and answers
+1639.48,1642.64," But again, I strive to give you answers because you shouldn't have just said yes"
+1642.64,1647.96," Yeah, you might have asked me that I've heard a little bit of a sensor for for what the"
+1648.4,1652.6000000000001, Paul's high-file all-fire energy orbs are doing inside the aperture science facility
+1652.6799999999998,1656.56, But I want to hear your oh mine is a I'm taking mine straight from jeeps
+1656.56,1660.56, Which is that's in the Half-Life universe that is just the form energy takes
+1661.24,1666.6," Is those balls got us all worked down. Yeah, it'll approve yeah, immediately of calling"
+1666.6,1672.6399999999999," No, I'm just I was just gonna say yeah, that's like that's like the half-life universe equivalent of like a socket in the wall"
+1672.6399999999999,1678.8799999999999," Yeah, it's exactly what it is that's what happens. How it works. Yeah, immediately after you know the game came out"
+1679.16,1685.8000000000002, Everyone was sort of you know speculating on all the hints in the game and whatnot from the keyboards with the mark the letters
+1685.8000000000002,1691.24," And this and that has that died down any yeah, I think it's yeah, it's died down"
+1691.24,1693.0, I mean it was kind of the
+1693.0,1695.0, And now people are
+1696.2800000000002,1699.6000000000001," Email's like yeah, we get a lot of I mean we still got emails from people playing at the first time"
+1699.6000000000001,1704.92, Most of the people who would be sort of inclined to obsess over that word
+1705.2,1707.6000000000001," You know, nerds no, no, not well"
+1707.6799999999998,1712.08," Yeah, maybe that too just like us, but what they say it's play early. Yeah, they played early"
+1712.08,1717.1599999999999," They were early adopters right now losses back on so there yeah, they can people can go back to loss"
+1719.04,1725.6799999999998," But yeah, most of what we get now is just you know, I played the game and it was awesome and you know people have some questions like that about"
+1726.6399999999999,1729.6799999999998, You know where where does it fit in the timeline and stuff like that?
+1730.48,1732.28, Which they're closing there you should be
+1732.6,1736.6799999999998, I don't want it fits in the time. I guess I'll play it again. Are you another 13 hours?
+1737.2,1742.52, Are you privy to the grand the grand story plan like do you know where this is all going or are you totally left in the dark off?
+1743.52,1747.78," Of portal or like the half-like universe. Yes, I have yes"
+1747.78,1749.78, I am in possession of some half-life secrets
+1750.8,1757.04," Did you work on mark late-law on the episode two story? Yeah, we I mean we sit in the same room me and"
+1757.44,1760.16, chat who you you guys know and
+1760.16,1764.68, Chat fouls and mark well we don't actually sit in the same room currently
+1764.68,1770.2, But we we were sitting in the same room during all the production the orange box and so there was just a lot of talk back and forth and
+1770.3600000000001,1777.5800000000002," We would write some stuff for mark would run some bias, but I mean mostly it was mark doing it and then chat would fill in a lot of the"
+1778.76,1780.28, sort of
+1780.28,1783.0, background dialogue and I did a little bit of that too
+1783.0,1790.0800000000002, So if your mentality is to want to provide the answers especially in the end are you satisfied that that series is gonna be able to do that
+1790.72,1793.8600000000001," Half-life. Yeah, I think that it will provide"
+1793.86,1798.3799999999999, I think that maybe marks less committed to I'm if I'm if I'm 100% total
+1799.9399999999998,1803.26, A adrenaline focused on giving answers mark is
+1803.74,1806.78, more sophisticated than I am and not as interested in that
+1806.78,1811.86," But I believe that you will get some satisfying answers. Yes, the ones that I've seen are satisfying"
+1813.58,1818.1799999999998," Take your word for yeah, right? Yeah, because I know you're trying to trick me into giving it all"
+1818.1799999999998,1820.1799999999998, GMann is Gordon from the future
+1820.18,1822.18, Oh
+1823.38,1825.38, Damn edit that out
+1825.8600000000001,1829.14, Have you guys ever discussed the notion of a like a direct sequel to portal?
+1830.3400000000001,1833.78," We definitely talk about it. Um, we haven't really"
+1834.7,1836.7, settled on anything
+1836.7,1842.1000000000001, At the moment and definitely I mean we don't think we've announced ain't no unspending announced
+1842.1000000000001,1844.7, I know Doug said something about they're being
+1845.5,1848.9, A portal to sort of in the future at the the
+1849.74,1855.7," EA shareholders. Yeah, I mean it's pretty it's a pretty much a foregone conclusion that there will be a portal to it's just"
+1855.98,1857.74, We're still kind of hammer now
+1857.74,1863.0," Are you I mean are both if you interested in doing that? I mean it seems like it would be an obvious yes, but at the same time"
+1863.0,1868.18," It's kind of like living maybe you want to work on something else. I mean well, I'm actually working on left for dead right now"
+1868.18,1874.06," Oh, okay, so so I just moved all of my stuff to wear everybody situated"
+1874.7,1879.46," Like right before GDC, so I haven't really done much of anything other than move my stuff and plug in my computer"
+1879.46,1881.46, But I'm gonna write it back from GDCs
+1882.18,1884.18, It would be interesting and
+1884.46,1890.78, Since you know these guys what they do the level designers and animators and artists is a lot more time consuming
+1890.78,1895.78, So the writers kind of spread between all the projects while probably touch everything to a
+1897.66,1902.02, Some degree did you have more story in mind at the time you finished it finished writing for portal?
+1902.98,1909.94," In terms of what might happen next? Yeah, but in terms of what actually I thought would be good to put in portal one"
+1909.94,1918.74," No, I mean I was fully satisfied that we told a nice simple story and and you know how to begin a middle and end and it felt it just felt right"
+1918.74,1920.74, You know to me
+1920.74,1926.06, Since we we got into the the writing part and what Eric does there has done with portal
+1926.06,1931.9, We've been really talked about it Kim does in the game or did and like and about the process by which
+1932.02,1938.82, All of these puzzles and levels were designed. I think Valve has some sort of insane machine of play testers
+1938.82,1944.28, Like a thousand people that they pass everything through like a like a softer it's more like random people
+1944.28,1949.72," That we find in the streets like hey, do you have a couple hours to come and and play a game or you know"
+1949.72,1953.46, Getting our family members to come in or people are on the office that hadn't seen the game yet
+1954.66,1959.74," And we basically just sit a play tester down, you know once a week like on Friday"
+1960.3,1962.94, And have them play through the game which
+1963.5,1967.34, Really really helps us refine you know our game play and our story as well
+1968.26,1973.02, Just watching players like you know we think we have good ideas and make good decisions
+1973.02,1978.9, But you really don't know until you see someone actually play through the game and then you can quickly realize oh
+1979.54,1981.54, Perhaps that wasn't such a good idea
+1982.1,1987.42, Let's reconsider that so and and to ask your previous question. So
+1988.38,1993.46, I was leveled as designer and portal and so basically I was the one sitting in hammer
+1993.8600000000001,1996.8600000000001, Sort of mocking up all the levels and handled the lighting
+1997.8200000000002,2002.3000000000002, So those weird areas behind the scenes where you know was a crazy guy scribbling on the wall
+2002.3000000000002,2005.18, I was that was me being bored one afternoon so
+2005.98,2008.54, So I'm glad people appreciate my boredom
+2009.42,2014.66, So I did a lot of to sort of random textures and and building our maps. Yeah
+2015.22,2016.9, Is it is it difficult to
+2017.3000000000002,2022.22, Learn from people's playthroughs like you might you know watch someone try a level that you've
+2022.7,2024.9, Puzzle that you've that you've set out
+2024.9,2030.78, But when they fail at it or frustrated by it is it always obvious what the problem is or does it take a lot of
+2030.78,2035.0600000000002, Detective work to figure out what you have to do to be able to make that more understandable or accessible
+2035.22,2042.74, Usually it's pretty straightforward and obvious like you know if if somebody isn't going to a particular section of the map that we really want them to
+2043.06,2048.32, You know one of the first things that we need to look at is okay our lighting is probably wrong in this room
+2048.32,2053.1, So we need to try and figure out how to bring players attention to a particular area
+2053.94,2061.58," You know, there's a lot of little artists tricks here and there like you know through the geometry and through lighting to direct players eyes to a particular area"
+2062.58,2069.94, And you know as far as like just sort of gameplay tuning and fixing you know most of that's pretty obvious to us like
+2070.5,2075.58, You know little things like okay the timer on this door when they press the button is far too short
+2075.58,2080.02, So we need to you know lengthen that a couple seconds and then we have someone play test again
+2080.02,2082.02," You can see okay. Yeah, that was just about right so"
+2083.14,2089.88, It's it's actually just incredibly valuable to sit someone down and have him play it's it's pretty amazing how
+2090.5,2094.82, beneficial it is are you ever able to have any fun with the game after having to go through
+2095.62,2097.62, Such a rigorous process
+2099.94,2101.94, Like a like a Vietnam set like a
+2106.94,2107.94, H
+2110.62,2121.8, But but so yeah the lesson for kids is make a multiplayer game because team forgers is what never was not fun right like when it was in we did the final crunch
+2123.58,2128.3, Push to get the 360 version out and so everybody had to play
+2128.82,2135.78," Yeah, was there like 24 hours a day playing all the games in in the orange box and the lucky people were the people"
+2135.78,2139.46, They got to play team forgers because it was fun. They're having a great time and you're like
+2144.6200000000003,2146.6200000000003, Rowan stuff at Alex just like
+2146.62,2148.62, You
+2154.06,2163.06," No, but came you said you're still able to turn on portal and have a good time. Yeah. Yeah. I mean there definitely was a time there when we had to play the game like"
+2164.06,2166.06, I don't know like
+2166.06,2171.38, Several hundred times when we were getting ready to ship to try and find all you know the little blast minute bugs
+2171.38,2175.2599999999998, We had to fix that that definitely I kind of wanted to jump off the roof
+2175.26,2182.5, But now actually when I turn on the game now that there's been enough time between like actually shipping the game and and
+2183.38,2188.46, And now I still have fun like just turning it on and you know having two portals on the ground
+2188.46,2192.7000000000003, And then just dropping a box in and just watching it pop back and forth like I still am using to me
+2192.7000000000003,2197.5800000000004, And maybe I'm just easing these so this valve not have a dedicated QA team. I mean to you
+2198.1000000000004,2202.26, Is it all of you are basically looking for bugs pretty much when we ship
+2202.82,2207.0200000000004, Sort of valves policy is you know because we're the ones that made the game
+2207.2200000000003,2214.7400000000002, We're gonna know the game the best so having us run through it is is pretty good for catching things that we don't think is quite right
+2214.7400000000002,2222.5800000000004, Not to mention because we are the developers we have a good idea of how to fix it to as well and a good method to track down the problem
+2222.5800000000004,2225.1000000000004," Yeah, it's kind of a it's kind of a combination of knowing the game"
+2225.1000000000004,2232.2200000000003, But then there's also this knowing who is gonna be able to fix this problem that you found or what the problem might actually be
+2232.26,2239.0600000000004," Like knowing a little bit of the solution, you know informs the question that you're in a need to ask to somebody to get them to fix it"
+2239.34,2244.1000000000004, We've got one guy that works at Valvus a dedicated tester. So see and saying
+2244.5,2249.0600000000004, It's like the craziest person there like you walk into his cubicle. He's like yeah
+2249.0600000000004,2252.98, He's he's actually a really nice laid back guy believe or not. I've never talked to
+2255.5400000000004,2257.5400000000004, I don't talk to test
+2262.82,2270.7400000000002," Wow, we just got a science. Yeah, what's the good happens? No, no, you got five minutes. Oh, we have five minutes. I got I got a random question for prayer"
+2271.78,2276.0200000000004," And this is a little out of the blue and not not related to a portal, but"
+2277.0200000000004,2281.3, So you you you have some kind of beef with a former Sierra designer
+2281.6200000000003,2288.26," Reperto Williams. Yeah, I mean not I don't actually have a beef a beef would imply like she has some knowledge of what that"
+2288.5,2291.38," Yeah, I don't think she's blissfully unaware of it and actually"
+2292.34,2298.82, Kind of age and distance from the last king's quest game is kind of muted it muted the beef. Yeah
+2299.1400000000003,2301.1400000000003, What was the beef? I
+2301.1400000000003,2304.98," Think it well. I think it was just an old man Murray article where oh, no, I know what it was"
+2305.38,2310.6600000000003," That's right. Yeah, I wish I had the quote in front of me. She just said it was one of those classic pompous"
+2312.7400000000002,2318.02, People don't play adventure games anymore because stupid people started buying like the different
+2318.1,2326.66," Flasher people started buying computers. Yeah, I remember that was one of the few times it old man Murray where I wasn't pretending to be I was really"
+2327.38,2329.38, sort of
+2329.38,2331.38, Crazy elitist just
+2331.94,2337.3," Yeah, I told you remember that quote. I do I was just a mad"
+2337.3,2341.62, But I was a similar to a rabble should have being a theater and chiefic computer gaming world
+2341.62,2347.38, And it's that the various you know from the Johnny Wilson days and I mean just a whole transition from you know
+2348.02,2352.82, Drognarch or did sure I mean I was like the first time that elit chin who was an editor
+2352.82,2357.78, I worked with who's now at Sega he and I the first time he and I wherever playing warcraft two multiplayer
+2359.06,2364.66," Computer gaming world into of the older editors came by I shouldn't say older there were my age, but you know"
+2364.66,2369.62, Whatever we're standing behind us and that they had sort of a more old-school mentality a turn-based mentality
+2369.62,2375.54, And they were standing behind us while we're playing warcraft two laughing at us not with at us and saying like
+2375.62,2377.62, Also whoever clicks the fastest wins
+2378.74,2380.82," Here it's like oh god, you know"
+2381.14,2386.1," It's you sit down and play and we'll see what happens, you know you actually need strategy to win"
+2386.1,2390.74," But so yeah, I'd totally remember that Roberto Williams quote because that was so fresh in because it's like"
+2390.98,2394.9, Actually maybe they're not buying your games because your games are kind of shit right exactly. I mean that
+2396.2599999999998,2398.42, I mean that that's the that's yeah
+2398.82,2403.54, Classic thing learn from play testing is it's it's your fault when people don't like your game
+2403.62,2409.46, It's your fault. It's not their fault. It's your fault. I mean you're entertainment industry people aren't buying although
+2410.02,2416.1," Yeah, uh, uh, greatly adventure games seem to be making a comeback now like almost like classic"
+2416.1,2422.5, I think it's part of the whole you know the ground swell of the sort of grass roots indie game making thing and it's it's
+2423.14,2425.14, A style of game that's actually
+2425.14,2430.18, Relatively easy for a few people to make but some big stuff like those salmon max games seem to be
+2430.8999999999996,2435.14, Popular and those are pretty much like straight ahead adventure games
+2435.14,2439.62, I mean like that the half-life games themselves are our a form of adventure game in a way
+2439.62,2445.2999999999997, I mean that there's there's there's so puzzle based as opposed to most other first person shooters that often
+2445.2999999999997,2450.98," I find myself having to think logically in the way that I used to with adventure games well, but the thing with adventure games was that it"
+2451.2999999999997,2453.2999999999997, Wasn't about thinking logically
+2453.3,2460.5800000000004," Well, that's just here some random objects and what insane thing"
+2460.5800000000004,2468.9," Right, you put that in the hair and the honey pot. Yeah, I'm a pie in the dog hair. Oh the dog the cat the cat hair mustache"
+2469.2200000000003,2472.42," Right, this is like a classic horrible puzzle, right?"
+2472.42,2473.94, Sheadiest adventure
+2473.94,2481.54," In the dream about that. It's the yeah, it's the it's the cat hair. I mean I didn't play a lot of but that when I had to play because I was"
+2481.62,2487.06, Reviewing it for get for some reason game spot had me review it which I think we're far enough and game spots been
+2487.46,2489.46, discredited enough now
+2490.02,2494.5, But I was this was like I don't know. Maybe is this 10 years ago now
+2494.66,2498.1, But I mean I'm the last person in the world who should have been reviewing the new
+2499.3,2500.02, Knights
+2500.02,2505.46," I can't be able night adventure, but I mean I gave it a shot. I was like, you know, I'll try it and"
+2505.86,2507.22, It was that
+2507.2999999999997,2511.54, Freaking and I had to play it because I was reviewing I had to play the whole game and that cap puzzle
+2512.4199999999996,2516.4199999999996," Oh, that was a puzzle. Oh, it was a puzzle. Oh, it was a game. I was getting for you. You had to"
+2517.14,2520.02, You had to rent a motorcycle. I may be getting some of them
+2520.3399999999997,2524.18," Insane details wrong here, but you had to rent a motorcycle, right?"
+2526.1,2528.74, And to do it you had to disguise yourself
+2529.4599999999996,2533.3799999999997, As this other guy and I don't remember why you had to disguise yourself as the other guy
+2533.54,2538.42, But for some reason you had to put a mustache on even though the other guy didn't have a mustache
+2538.42,2541.46, You like drew a mustache on it was thing and so
+2542.02,2545.38, Like the initial thing you might think of is I had to build a fake mustache
+2545.38,2547.38, There's hair growing all out of my body
+2549.2200000000003,2553.62," Some of that hair off and put it on me, but not advocating a few stash now"
+2554.7400000000002,2562.5, It would have been easier than what ended up happening. You had to there's a there was a barn with a hole in the bottom and you had to take a piece of tape
+2562.74,2569.78, A loop a tape and put it on the top of the hole and then chase a cat through the hole and then
+2570.66,2575.78, There would be hair cat hair on the tape and then you'd think that would be enough to apply to your face
+2575.78,2584.18, But then you had to use honey to apply the tape and the cat to your face to make a mustache to disguise yourself as a guy who didn't have a mustache to begin
+2586.18,2588.18, Was the right amount of that?
+2588.18,2590.9," That is the puzzle. Yeah, don't be dumb at home. Hey, Murray that comes there"
+2591.86,2596.82, So for all those people that are in that group that like will adventure games at least we had to think when we played our games
+2596.82,2599.38, That's like that's the truth right there. Fuck you guys
+2600.58,2604.58," If you like it, I mean if you like that sort of thing more power to you, but I"
+2604.9,2612.34, It was that and it drove me nuts that part of the fuel for some of that old man Murray stuff was always just because I would have to finish some of these games
+2612.34,2615.78, And it was killing me. I mean these are just games. I would never finish
+2617.06,2619.78, If I wasn't getting paid to playing my dad
+2621.06,2624.34, For a living and that's actually how they do it. Is that a joke?
+2628.42,2632.42," Wait, how did you how did you come up with the the old man Murray?"
+2633.38,2636.26, Like I forget what it's called the crate
+2636.58,2641.86," Great time to create index review system or whatever. Oh, I don't that mean that was one"
+2642.42,2644.26, I don't remember exactly what the
+2644.5800000000004,2646.5800000000004, I don't know the link
+2648.34,2653.6200000000003, But there's something about that that I think is still like ridiculous and amazing today
+2653.6200000000003,2660.26, And I wish there was like a statistical website that kept track of the data of like how long it took from the beginning of a game to get to an
+2660.6600000000003,2664.7400000000002, It's in the position to do it because you think lay up and more so there's the shipping containers
+2664.7400000000002,2667.6200000000003," I mean valves as guilty as anyone. Oh, no. I mean I yeah"
+2667.94,2672.42, Everybody does it the big enormous ones like from dogs. I mean that's because it's a great way to build a level right?
+2672.7400000000002,2676.1, It's a great angle yeah works like Legos yeah
+2678.1,2680.1, I'm all for
+2682.1,2684.1, Finishing
+2684.1,2686.1, That's what put some crates in there and go home
+2686.7400000000002,2691.46, Ladies to finish on the mustache thing. I got to ask you either of you see jackass and movie two
+2691.62,2693.62," I did okay, so you know where I'm going"
+2694.82,2700.34," No, I just don't well they told us like the funniest thing in that movie they told like one of their their friends who's you know"
+2700.5,2707.1400000000003, And it had been the patty that they had this gag and that they were gonna basically have him poses a cab driver and that they were all
+2707.1400000000003,2711.6200000000003, I can take the best of them but the gag was ultimately on him but even before they got to the real gag
+2711.6200000000003,2714.1000000000004, They started it off by shaving their pubs and then
+2715.2200000000003,2722.26, Putting putting the shavings in a Hollywood movie magic kid and then when they set him up with the full beard a full mustache
+2722.6600000000003,2723.94, It was
+2725.94,2729.46, And then they had a reverse and that actually speaking speaking of that though
+2729.54,2731.54, I heard Johnny Knoxville
+2732.42,2734.42, Almost entirely severed his penis
+2738.02,2740.02," Yeah, just recently"
+2740.02,2743.78, I mean a lot like it that implies a partial severance
+2743.78,2745.7," Then yeah, I think I mean that's like not gone that a"
+2746.9,2752.26, I don't know I don't know exactly what happened is doing he was doing some sort of evil can evil motor cycle stun and it just
+2752.82,2756.02, I think it's on YouTube. He's trying to jump over 15 lorry in a body
+2756.02,2761.3, So like Harry Potter has that nearly headless neck. He's like nearly penisless
+2762.5,2768.02, Johnny Knox is why did we do this man? I feel guilty. I feel bad is you started it when
+2770.5,2774.98, You brought up jackass entirely Sean Ellie it's full. Thank you. I'm just a year winner
+2779.14,2781.14, There's no where to go from there
+2781.14,2783.14, That was it they could give it to your winner
+2786.2599999999998,2792.9, And as you're surprised we're gonna give you a free set of beard because I have a way or the fact that Johnny Knoxville's penis got cut off
+2793.46,2795.7, Like invalidates everything we did on portal
+2796.5,2799.14, I just know about it
+2799.14,2801.14, It's just reddish
+2801.14,2805.38, I'm not sure I'm here. I think I heard it on the radio. I couldn't even stop listening
+2806.58,2810.42, Like I chose to find out about it. I'll give you my email. We could talk about it. Yeah
+2812.66,2815.7," All right, we're out. Thank you eric and Kim"
+2816.02,2818.02, Thanks
