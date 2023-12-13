@@ -57,3 +57,4 @@ Ben, Tom, Maxime
 | 22/11/2023      | [Simplifying Transformer Blocks](https://arxiv.org/abs/2311.01906) ||
 | 29/11/2023      | [The Shaped Transformer: Attention Models in the Infinite Depth-and-Width Limit](https://arxiv.org/abs/2306.17759) ||
 | 06/12/2023      | [Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2204.05862) ||
+| 06/12/2023      | [Deep Variational Reinforcement Learning for POMDPs](https://arxiv.org/abs/1806.02426)||
