@@ -59,3 +59,4 @@ Ben, Tom, Maxime
 | 06/12/2023      | [Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2204.05862) ||
 | 06/12/2023      | [Deep Variational Reinforcement Learning for POMDPs](https://arxiv.org/abs/1806.02426)||
 | 03/01/2024      | [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://arxiv.org/pdf/2310.05736.pdf)||
+| 24/01/2024      | [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/pdf/2305.18290.pdf)||
