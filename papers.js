@@ -4,8 +4,8 @@ async function fetchPapers(authorId) {
     return data.papers;
 }
 
-function displayPapers(papers) {
-    const papersList = document.getElementById('papers-list');
+function displayPapers(papers, elementId = 'papers-list') {
+    const papersList = document.getElementById(elementId);
     papers.sort((a, b) => b.year - a.year); // Sort by year, most recent first
 
     papers.forEach(paper => {
@@ -22,10 +22,17 @@ function displayPapers(papers) {
     });
 }
 
-async function init() {
-    const authorId = '2217761036'; // Replace with your Semantic Scholar Author ID
+async function initPapers() {
+    const authorId = 'YOUR_SEMANTIC_SCHOLAR_AUTHOR_ID'; // Replace with your Semantic Scholar Author ID
     const papers = await fetchPapers(authorId);
-    displayPapers(papers);
+
+    if (document.getElementById('papers-list')) {
+        displayPapers(papers, 'papers-list');
+    }
+
+    if (document.getElementById('cv-papers-list')) {
+        displayPapers(papers.slice(0, 5), 'cv-papers-list'); // Display only the 5 most recent papers in CV
+    }
 }
 
-window.onload = init;
+window.onload = initPapers;
