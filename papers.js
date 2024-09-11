@@ -23,7 +23,7 @@ function displayPapers(papers, elementId = 'papers-list') {
 }
 
 async function initPapers() {
-    const authorId = 'YOUR_SEMANTIC_SCHOLAR_AUTHOR_ID'; // Replace with your Semantic Scholar Author ID
+    const authorId = '2217761036'; // Replace with your Semantic Scholar Author ID
     const papers = await fetchPapers(authorId);
 
     if (document.getElementById('papers-list')) {
