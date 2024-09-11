@@ -1,0 +1,45 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #CCCCCC;
+    color: #000080;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: #800000;
+}
+a {
+    color: #0000FF;
+    text-decoration: underline;
+}
+a:hover {
+    color: #FF0000;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #000080;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #000080;
+    color: #FFFFFF;
+}
+.navbar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.navbar a {
+    margin: 0 10px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000080;
+}

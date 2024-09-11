@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Papers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="papers.js"></script>
+</head>
+<body>
+    <div class="content">
+        <h1>Your Name - Papers</h1>
+        <div class="navbar">
+            <a href="index.html">Home</a> |
+            <a href="papers.html">Papers</a> |
+            <a href="reading-group.html">Reading Group</a> |
+            <a href="cv.html">CV</a> |
+            <a href="blog.html">Blog</a>
+        </div>
+
+        <h2>Published Papers</h2>
+        <ul id="papers-list">
+            <!-- Papers will be dynamically inserted here -->
+        </ul>
+
+        <hr>
+        <p style="text-align: center;">© 2024 Your Name. Last updated: <span id="last-updated"></span></p>
+    </div>
+    <script>
+        document.getElementById('last-updated').textContent = new Date().toDateString();
+    </script>
+</body>
+</html>
