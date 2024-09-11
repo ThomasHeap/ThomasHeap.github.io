@@ -11,6 +11,9 @@ h1, h2, h3 {
     text-align: center;
     color: #800000;
 }
+h1.site-title {
+    text-transform: capitalize;
+}
 a {
     color: #0000FF;
     text-decoration: underline;
