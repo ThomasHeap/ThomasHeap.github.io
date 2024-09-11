@@ -23,8 +23,6 @@ Work experience
 
 ### Selected Publications
 
-<ul id="cv-papers-list">
-  <!-- Most recent papers will be dynamically inserted here -->
-</ul>
+
 
 [See all publications](/papers)
