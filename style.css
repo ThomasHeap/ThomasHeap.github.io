@@ -46,3 +46,9 @@ img {
     margin: 0 auto;
     border: 2px solid #000080;
 }
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
