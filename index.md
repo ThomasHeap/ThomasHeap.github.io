@@ -15,3 +15,9 @@ In addition to this primary line of enquiry I am interested in:
 * Bayesian Machine learning more generally
 
 Before starting my PhD I worked in industry, most recently as a research engineer working on speech recognition for fraud detection. Prior to that I did my MSc at The University of Edinburgh where my thesis was supervised by [David Sterratt](https://www.ed.ac.uk/profile/sterratt) and [Melanie Stefan](http://melaniestefan.net/)
+
+
+## Connect with me
+
+- [Twitter](https://x.com/ThomasEHeap)
+- [GitHub](https://github.com/ThomasHeap)
