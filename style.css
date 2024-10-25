@@ -1,6 +1,6 @@
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color: #f0f4f8;  /* Very light blue-gray background */
+    font-family: "helvetica neue", Arial, sans-serif;
+    background-color: #f0f4f8;  /* Light blue-gray background */
     color: #4a5568;
     max-width: 800px;
     margin: 0 auto;
@@ -11,7 +11,7 @@ body {
 h1, h2, h3 {
     text-align: center;
     color: #9f7aea;  /* Soft purple */
-    font-weight: 600;
+    font-weight: bold;
 }
 
 h1.site-title {
@@ -21,66 +21,47 @@ h1.site-title {
 
 a {
     color: #667eea;  /* Pastel blue */
-    text-decoration: none;
-    transition: all 0.2s ease;
-    padding: 2px 4px;
-    border-radius: 3px;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #5a67d8;  /* Slightly darker blue */
-    background-color: #e6fffa;  /* Very light teal */
+    color: #9f7aea;  /* Soft purple */
+    background-color: #fff5f7;  /* Very light pink */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 th, td {
-    border: 1px solid #e2e8f0;
-    padding: 12px;
+    border: 2px solid #9f7aea;  /* Soft purple */
+    padding: 8px;
     text-align: left;
 }
 
 th {
     background-color: #b2f5ea;  /* Soft teal */
-    color: #2d3748;
+    color: #4a5568;
+    font-weight: bold;
 }
 
 .navbar {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 15px 0;
+    margin-bottom: 20px;
+    border: 2px solid #fbd38d;  /* Soft orange */
+    padding: 10px;
     background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .navbar a {
-    margin: 0 15px;
-    padding: 5px 15px;
-    border-radius: 20px;
-    color: #667eea;  /* Pastel blue */
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    background-color: #faf5ff;  /* Very light purple */
-    color: #9f7aea;  /* Soft purple */
-    transform: translateY(-1px);
+    margin: 0 10px;
 }
 
 img {
     display: block;
     margin: 0 auto;
-    border: 3px solid #fbd38d;  /* Soft orange */
-    border-radius: 4px;
+    border: 2px solid #fbd38d;  /* Soft orange */
 }
 
 .profile-image {
@@ -88,32 +69,16 @@ img {
     height: auto;
     display: block;
     margin: 20px auto;
-    border-radius: 50%;
-    border: 3px solid #fbd38d;  /* Soft orange */
-    box-shadow: 0 4px 12px rgba(159, 122, 234, 0.2);  /* Purple shadow */
-    transition: transform 0.3s ease;
 }
 
-.profile-image:hover {
-    transform: scale(1.02);
-}
-
-/* Custom styles for different sections */
-.reading-group {
-    background-color: #fff5f7;  /* Very light pink */
-    padding: 20px;
-    border-radius: 12px;
+/* Web 1.0 style horizontal rule */
+hr {
+    border: none;
+    border-top: 2px dashed #9f7aea;  /* Soft purple */
     margin: 20px 0;
 }
 
-.papers {
-    background-color: #f0fdf4;  /* Very light green */
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-}
-
-/* Add a subtle pattern to the background */
+/* Add the subtle pattern to the background */
 body::before {
     content: "";
     position: fixed;
@@ -131,25 +96,23 @@ body::before {
     background-size: 20px 20px;
 }
 
-/* Style for code blocks */
-pre, code {
-    background-color: #f8f4ff;  /* Very light purple */
-    border-radius: 4px;
-    padding: 2px 4px;
-    font-family: "Fira Code", monospace;
-}
-
-/* Add some flair to bullet points */
-ul {
-    list-style: none;
+/* Web 1.0 style blockquotes */
+blockquote {
+    border-left: 4px solid #fbd38d;  /* Soft orange */
+    margin-left: 0;
     padding-left: 20px;
+    font-style: italic;
 }
 
-ul li::before {
-    content: "•";
-    color: #fbd38d;  /* Soft orange */
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+/* Simple bullet styling */
+ul {
+    list-style-type: square;
+}
+
+/* Code blocks with that classic look */
+pre, code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #ffffff;
+    border: 1px solid #9f7aea;  /* Soft purple */
+    padding: 2px 4px;
 }
