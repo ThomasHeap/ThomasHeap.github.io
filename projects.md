@@ -5,24 +5,10 @@ title: Projects
 
 ## Projects
 
-Here are some of my ongoing and completed projects:
+Here are the research projects I've been involved in
 
-### Project 1: [Project Name]
+# [Alan - Tensorised probabilistic programming](https://alan-ppl.readthedocs.io/en/latest/)
 
-Brief description of the project, its goals, and outcomes.
+Alan is a probabilistic programming language that aims to provide a simple and intuitive way to perform fast Bayesian inference. In particular it is designed to showcase the “Massively Parallel” framework as outlined in [Massively Parallel Reweighted Wake-Sleep](https://arxiv.org/abs/2305.11022) and the source trick for computing posterior moments as outlined in [Using autodiff to estimate posterior moments, marginals and samples](https://arxiv.org/abs/2310.17374).
 
-[Link to project or related paper]
 
-### Project 2: [Project Name]
-
-Brief description of the project, its goals, and outcomes.
-
-[Link to project or related paper]
-
-### Project 3: [Project Name]
-
-Brief description of the project, its goals, and outcomes.
-
-[Link to project or related paper]
-
----
