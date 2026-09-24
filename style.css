@@ -116,3 +116,42 @@ pre, code {
     border: 1px solid #9f7aea;  /* Soft purple */
     padding: 2px 4px;
 }
+
+pre {
+    padding: 10px;
+    overflow-x: auto;
+}
+
+/* Blog */
+.post-date {
+    text-align: center;
+    font-style: italic;
+}
+
+.post-content h3 {
+    text-align: left;
+}
+
+.post-content {
+    overflow-x: auto;
+}
+
+.post-list {
+    list-style-type: square;
+}
+
+.post-back {
+    text-align: center;
+}
+
+/* CV */
+.cv-download {
+    text-align: center;
+}
+
+.cv-embed {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    border: 2px solid #fbd38d;  /* Soft orange */
+}

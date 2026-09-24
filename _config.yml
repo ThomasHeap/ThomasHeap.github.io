@@ -1,0 +1,17 @@
+title: Thomas Heap
+description: Academic Website
+url: "https://thomasheap.github.io"
+markdown: kramdown
+
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - update_papers.py
+  - README.md
