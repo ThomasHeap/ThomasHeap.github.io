@@ -7,15 +7,17 @@ custom_js: https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.1.0/3Dmol-min.js
 
 Because there's a new adaptyv protein design competition starting soon, I thought I'd try to learn a bit about how AI is used to generate binders for proteins. A good first step here is to use the recent GEM/Adaptyv RBX1 competition to try a couple of things: 1. Making a pipeline for generating binders and 2. Find out how binders are selected for experimental testing.
 
+By the end we will see some metrics that correlate with expression and binding, and see if a proposed set of gating criteria would have been effective in this challenge.
+
 RBX1 is a part of a protein complex called Cullin-RING E3 ligase complexes that tags other unwanted or damaged proteins for destruction and recycling. It does this through a process called ubiquitinisation, attaching a molecule called ubiquitin to mark proteins for degradation. It plays an important role in cell proliferation and thus cancer, as well as some other diseases, so makes a good target for drugging. 
 
-However it is difficult to design binders primarily for three reasons: firstly it has this large intrinsically disordered region on the N-terminal, this protein forms part of a larger complex, and without the other subunits pinning it down this region can adopt many conformations (in fact it can still take on different conformations when part of the whole complex, which allows the complex the requisite flexibility to attach ubiquitin to many different proteins). The uncertainty in this region swamps the uncertainty on the rest of the sequence, and thus metrics like whole complex pTM or pLDDT or any other metric which doesn't restrict itself to contact residues and which is computed across the whole complex, get tanked by the disordered region even though the uncertainty in that region might not effect where we would want to bind to anyway. Secondly, on the other end of the protein it has these three zinc ions which get held in a cross-brace sort of position and which AI models usually struggle to place correctly. But without placing these correctly the RING domain won't fold right. And finally, it lacks useful evolutionary relatives or analogues, so MSA based approaches have little to go on.
+However it is difficult to design binders primarily for three reasons: firstly it has this large intrinsically disordered region on the N-terminal, this protein forms part of a larger complex, and without the other subunits pinning it down this region can adopt many conformations (in fact it can still take on different conformations when part of the whole complex, which allows the complex the requisite flexibility to attach ubiquitin to many different proteins). The uncertainty in this region swamps the uncertainty on the rest of the sequence, and thus metrics like whole complex pTM or pLDDT or any other metric which doesn't restrict itself to contact residues and which is computed across the whole complex, get tanked by the disordered region even though the uncertainty in that region might not affect where we would want to bind to anyway. Secondly, on the other end of the protein it has these three zinc ions which get held in a cross-brace sort of position and which AI models usually struggle to place correctly. But without placing these correctly the RING domain won't fold right. And finally, it lacks useful evolutionary relatives or analogues, so MSA based approaches have little to go on.
 
 The scale of the problem shows in the fold-prediction baselines. According to a [blog post by the winners of the competition](https://research.mandrake.bio/p/we-dont-even-design-binders), Mandrake bio, ESMFold reaches pLDDT 0.40 on this target, Protenix ab initio 0.60, Boltz-2 0.63. All of these uninformative or marginal. In adaptyv's competition out of 322 designs, only 9 bound to the target and 255 expressed.
 
 Mandrake's ORBIT pipeline took an approach that:
 
-- Used known structure information: They fed Protenix the NMR structure with the ions explicitly placed and the pLDDT rose significantly (predictably). There's no reason not to use this information since the goal here isn't to fold the protein, its to predict binders.
+- Used known structure information: They fed Protenix the NMR structure with the ions explicitly placed and the pLDDT rose significantly (predictably). There's no reason not to use this information since the goal here isn't to fold the protein, it's to predict binders.
 - Constrained the search space. Standard differentiable hallucination runs trajectories from a uniform prior and thus spends a lot of time trying to find the right neighbourhood rather than doing the interesting refinement. Instead they run DH for a while, inverse fold with SolubleMPNN to get a general structure and then use this as a prior to begin optimisation from.
 - They treat each differentiable optimisation run as a trajectory, which allows for thinking about early stopping using a classifier or recognising that the argmax projection could degrade during this process so they can instead harvest the best sequence along the trajectory.
 - Use an attractive field in coordinate space that pulls the binder towards high-value target residues. Would be interesting to compare against the distogram based methods which bias which residues form contacts but not how the binder gets drawn to them.
@@ -23,8 +25,8 @@ Mandrake's ORBIT pipeline took an approach that:
 
 This last point is the most interesting to me, we can look at which properties are most important from this competition. Doing this is fraught with all kinds of problems however:
 
-1. The designs come pre-filtered, only the designs which were passed selection make it into the datasets, so any analysis you do automatically loses power
-2. The selection can change between competitions, for instance in the nipah competition they selected 600 designs based on Boltz-2 ipSAE, 400 selected by a panel of experts, and 200 chosen by community vote.
+1. The designs come pre-filtered, only the designs which passed selection make it into the datasets, so any analysis you do automatically loses power
+2. The selection can change between competitions, for instance in the Nipah competition they selected 600 designs based on Boltz-2 ipSAE, 400 selected by a panel of experts, and 200 chosen by community vote.
 3. Before even making it to the selection stage, designs are prefiltered by the contestants using various filters, [some may even experimentally test their designs before submission](https://x.com/sokrypton/status/1998208058632351861).
 4. The selection metrics are biased towards certain structural motifs, α-helical proteins for instance, which further biases any analysis. 
 
@@ -40,7 +42,7 @@ designs using input_interface_shape_complementary > 0.62 and RMSD_binder < 3.73,
 K designs based on AF3 ipSAE_min
 ```
 
-I thought it would be worthwhile to see if me and claude could build a binder generation pipeline informed somewhat by mandrake's pipeline (more like claude building the entire thing in about 3 prompts) and then see how the 9 binders from the competition would have fared against the aforementioned metrics and selection criteria. In line with Mandrake's proposal we will use protenix in place of AF3 to calculate metrics.
+I thought it would be worthwhile to see if me and Claude could build a binder generation pipeline informed somewhat by Mandrake's pipeline (more like Claude building the entire thing in about 3 prompts) and then see how the 9 binders from the competition would have fared against the aforementioned metrics and selection criteria. In line with Mandrake's proposal we will use protenix in place of AF3 to calculate metrics.
 
 ### My pipeline
 Claude code is really good at this sort of thing, the hardest part of building the pipeline was dealing with the feelings of obsolescence as it handily whipped off code it would have taken me weeks to do by hand. The pipeline ended up looking like:
@@ -89,7 +91,7 @@ RFDiffusion gives us a structure which hopefully gets nice and close to our stat
 
 Looks pretty good, SolubleMPNN clearly does a good job at this.
 
-So in the next couple of section we will take a really crude look at what metrics predict expression and binding in this set. To do this properly we should probably look more generally beyond RBX1 considering how few binders there were and deal with uncertainty and significance properly. But just to start let's see.
+So in the next couple of sections we will take a really crude look at what metrics predict expression and binding in this set. To do this properly we should probably look more generally beyond RBX1 considering how few binders there were and deal with uncertainty and significance properly. But just to start let's see.
 
 ### Expression (n=321, 255 expressed)
 Before a design can bind to the target it must express, meaning they must be able to be produced in the assay adaptyv used. (Note one design had no binder label). Here we have sign flipped metrics appropriately so higher AUC always means "better at this metric predicts expression better".
@@ -155,7 +157,7 @@ There are far fewer binders than expressors, so these results need to be taken w
 | `seq_pi` | 0.312 | 0.021 |
 | `seq_net_charge_ph7` | **0.197** | 0.018 |
 
-By eye these seem to make sense, RBX1 is a pretty complicated molecule so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with. The metrics that dominate have a lot to do with the binding site or other things that would make a molecule better or worse at sticking to another: seq_fraction_charged is about how much of the sequence has charged residues, aggregation slides a 7 residue window over the sequence and calculates hydropathy, basically asking "is there a continuous patch with high hydrophobicity and how hydrophobic is it?", buried_sasa asks a similar question but appends "is it exposed on the outside of the molecule?" although why the simple sequence level metric that has no structural information outperforms the more sophisticated buried_sasa is a bit mysterious. 
+By eye these seem to make sense, RBX1 is a pretty complicated molecule so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with, so binder length being longer seems reasonable. The metrics that dominate have a lot to do with the binding site or other things that would make a molecule better or worse at sticking to another: seq_fraction_charged is about how much of the sequence has charged residues, aggregation slides a 7 residue window over the sequence and calculates hydropathy, basically asking "is there a continuous patch with high hydrophobicity and how hydrophobic is it?", buried_sasa asks a similar question but appends "is it exposed on the outside of the molecule?" although why the simple sequence level metric that has no structural information outperforms the more sophisticated buried_sasa is a bit mysterious. 
 
 One other interesting thing to note is that binders tend to be more negatively charged than non-binders. In the next few segments we will investigate this a bit.
 
