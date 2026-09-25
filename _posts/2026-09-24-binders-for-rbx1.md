@@ -159,7 +159,7 @@ There are far fewer binders than expressors, so these results need to be taken w
 
 By eye these seem to make sense, RBX1 is a pretty complicated molecule so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with, so binder length being longer seems reasonable. The metrics that dominate have a lot to do with the binding site or other things that would make a molecule better or worse at sticking to another: seq_fraction_charged is about how much of the sequence has charged residues, aggregation slides a 7 residue window over the sequence and calculates hydropathy, basically asking "is there a continuous patch with high hydrophobicity and how hydrophobic is it?", buried_sasa asks a similar question but appends "is it exposed on the outside of the molecule?" although why the simple sequence level metric that has no structural information outperforms the more sophisticated buried_sasa is a bit mysterious. 
 
-One other interesting thing to note is that binders tend to be more negatively charged than non-binders. In the next few segments we will investigate this a bit.
+One other interesting thing to note is that binders tend to be more negatively charged than non-binders. In the next segment we will investigate this a bit.
 
 ### So if the binders are negatively charged...
 
