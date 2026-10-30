@@ -34,15 +34,10 @@ Adaptyv has run several of these competitions: A two stage competition aiming to
 
 In the first adaptyv competition on EGFR iPAE, ipTM and ESM-2 pseudo-likelihood were used as selection mechanisms. Also additional binders were selected to increase diversity in the final released dataset, so the above concerns are well known. One of the results that stood out to me in [their write up](https://www.biorxiv.org/content/10.1101/2025.04.17.648362v2.full.pdf) was that lumping all designs together meant that metrics that might only show significance on say, peptides, would be marked down as insignificant. In fact the winning design was completely overlooked by the above metrics. In the Nipah competition ipSAE was chosen, but it had issues in that scores would vary slightly due to random seed and this variability was not uniform across designs, which may have advantaged designs which gave more stable scores. All of this is to say that determining *in-silico* whether a design will bind is quite challenging. In a [2025 paper](https://www.biorxiv.org/content/10.1101/2025.08.14.670059v2) Overath et al. propose the following selection criteria:
 
-```
-Based on our analysis, we recommend the following actionable filtering strategies. The first involves setting
-one of the following thresholds for filtering designs: AF3 ipSAE_min > 0.61; AF3 ipSAE_min x interface_∆G/∆SASA
-< -1.5; or AF3 LIS x input_interface_shape_complementary > 0.42. The second strategy entails pre-filtering
-designs using input_interface_shape_complementary > 0.62 and RMSD_binder < 3.73, followed by selecting the top
-K designs based on AF3 ipSAE_min
-```
 
-I thought it would be worthwhile to see if me and Claude could build a binder generation pipeline informed somewhat by Mandrake's pipeline (more like Claude building the entire thing in about 3 prompts) and then see how the 9 binders from the competition would have fared against the aforementioned metrics and selection criteria. In line with Mandrake's proposal we will use protenix in place of AF3 to calculate metrics.
+"Based on our analysis, we recommend the following actionable filtering strategies. The first involves setting one of the following thresholds for filtering designs: AF3 ipSAE_min > 0.61; AF3 ipSAE_min x interface_∆G/∆SASA < -1.5; or AF3 LIS x input_interface_shape_complementary > 0.42. The second strategy entails pre-filtering designs using input_interface_shape_complementary > 0.62 and RMSD_binder < 3.73, followed by selecting the top K designs based on AF3 ipSAE_min"
+
+I thought it would be worthwhile to see if me and Claude could build a binder generation pipeline informed somewhat by Mandrake's pipeline and then see how the 9 binders from the competition would have fared against the aforementioned metrics and selection criteria. In line with Mandrake's proposal we will use protenix in place of AF3 to calculate metrics.
 
 ### My pipeline
 Claude code is really good at this sort of thing, the hardest part of building the pipeline was dealing with the feelings of obsolescence as it handily whipped off code it would have taken me weeks to do by hand. The pipeline ended up looking like:
@@ -66,7 +61,7 @@ target structure + hotspot residues
    feature table
 ```
 
-First we can do a few sanity checks of this pipeline, do the generated binders make much sense, do we actually make contact with the binding site etc.
+First we can do a few sanity checks of this pipeline, when we generate binders do they make sense, do we actually make contact with the binding site etc.
 
 ### Do we make contact?
 The first question is: when we use RFDiffusion to design binders against our fold from protenix, do we actually make contact with the binding sites we specify (A74/F81/Y106, chosen somewhat arbitrarily although I excluded the disordered region)? The answer seems to be yes for at least one of the sites and "somewhat" if we want to contact all three sites? We don't necessarily need a binder to contact all 3 hotspots so contacting just one is a good sign that we are on target.
@@ -91,7 +86,8 @@ RFDiffusion gives us a structure which hopefully gets nice and close to our stat
 
 Looks pretty good, SolubleMPNN clearly does a good job at this.
 
-So in the next couple of sections we will take a really crude look at what metrics predict expression and binding in this set. To do this properly we should probably look more generally beyond RBX1 considering how few binders there were and deal with uncertainty and significance properly. But just to start let's see.
+## Evaluating the published dataset
+In the next couple of sections we will take a really crude look at what metrics predict expression and binding in the set of proposed binders released after the competition. To do this properly we should probably look more generally beyond RBX1 considering how few binders there were and deal with uncertainty and significance properly. But just to start let's see.
 
 ### Expression (n=321, 255 expressed)
 Before a design can bind to the target it must express, meaning they must be able to be produced in the assay adaptyv used. (Note one design had no binder label). Here we have sign flipped metrics appropriately so higher AUC always means "better at this metric predicts expression better".
