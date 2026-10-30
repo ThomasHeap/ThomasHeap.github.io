@@ -1,7 +1,16 @@
+/* Palette: one muted blue accent on warm-neutral greys.
+   --text      #2d3748  body text
+   --muted     #718096  secondary text
+   --accent    #2b6cb0  links, site title
+   --rule      #cbd5e0  borders and rules
+   --surface   #ffffff  navbar, code
+   --subtle    #edf2f7  table headers, hover
+   --bg        #f7f8fa  page background */
+
 body {
     font-family: "helvetica neue", Arial, sans-serif;
-    background-color: #f0f4f8;  /* Light blue-gray background */
-    color: #4a5568;
+    background-color: #f7f8fa;
+    color: #2d3748;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -10,23 +19,23 @@ body {
 
 h1, h2, h3 {
     text-align: center;
-    color: #9f7aea;  /* Soft purple */
+    color: #2d3748;
     font-weight: bold;
 }
 
 h1.site-title {
     text-transform: capitalize;
-    color: #667eea;  /* Pastel blue */
+    color: #2b6cb0;
 }
 
 a {
-    color: #667eea;  /* Pastel blue */
+    color: #2b6cb0;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #9f7aea;  /* Soft purple */
-    background-color: #fff5f7;  /* Very light pink */
+    color: #1a4971;
+    background-color: #edf2f7;
 }
 
 table {
@@ -35,21 +44,21 @@ table {
 }
 
 th, td {
-    border: 2px solid #9f7aea;  /* Soft purple */
+    border: 1px solid #cbd5e0;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #b2f5ea;  /* Soft teal */
-    color: #4a5568;
+    background-color: #edf2f7;
+    color: #2d3748;
     font-weight: bold;
 }
 
 .navbar {
     text-align: center;
     margin-bottom: 20px;
-    border: 2px solid #fbd38d;  /* Soft orange */
+    border: 1px solid #cbd5e0;
     padding: 10px;
     background-color: #ffffff;
 }
@@ -61,7 +70,7 @@ th {
 img {
     display: block;
     margin: 0 auto;
-    border: 2px solid #fbd38d;  /* Soft orange */
+    border: 1px solid #cbd5e0;
 }
 
 .profile-image {
@@ -74,11 +83,11 @@ img {
 /* Web 1.0 style horizontal rule */
 hr {
     border: none;
-    border-top: 2px dashed #9f7aea;  /* Soft purple */
+    border-top: 2px dashed #cbd5e0;
     margin: 20px 0;
 }
 
-/* Add the subtle pattern to the background */
+/* Faint background pattern, neutral so it does not compete with the text */
 body::before {
     content: "";
     position: fixed;
@@ -86,22 +95,23 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.4;
+    opacity: 0.35;
     z-index: -1;
     pointer-events: none;
-    background: linear-gradient(135deg, #fff5f7 25%, transparent 25%) -10px 0,
-                linear-gradient(225deg, #fff5f7 25%, transparent 25%) -10px 0,
-                linear-gradient(315deg, #fff5f7 25%, transparent 25%),
-                linear-gradient(45deg, #fff5f7 25%, transparent 25%);
+    background: linear-gradient(135deg, #edf0f4 25%, transparent 25%) -10px 0,
+                linear-gradient(225deg, #edf0f4 25%, transparent 25%) -10px 0,
+                linear-gradient(315deg, #edf0f4 25%, transparent 25%),
+                linear-gradient(45deg, #edf0f4 25%, transparent 25%);
     background-size: 20px 20px;
 }
 
 /* Web 1.0 style blockquotes */
 blockquote {
-    border-left: 4px solid #fbd38d;  /* Soft orange */
+    border-left: 4px solid #cbd5e0;
     margin-left: 0;
     padding-left: 20px;
     font-style: italic;
+    color: #4a5568;
 }
 
 /* Simple bullet styling */
@@ -113,7 +123,7 @@ ul {
 pre, code {
     font-family: "Courier New", Courier, monospace;
     background-color: #ffffff;
-    border: 1px solid #9f7aea;  /* Soft purple */
+    border: 1px solid #cbd5e0;
     padding: 2px 4px;
 }
 
@@ -126,6 +136,7 @@ pre {
 .post-date {
     text-align: center;
     font-style: italic;
+    color: #718096;
 }
 
 .post-content h3 {
@@ -153,5 +164,5 @@ pre {
     display: block;
     width: 100%;
     height: 1000px;
-    border: 2px solid #fbd38d;  /* Soft orange */
+    border: 1px solid #cbd5e0;
 }
