@@ -5,7 +5,7 @@ date: 2026-09-24
 custom_js: https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.1.0/3Dmol-min.js
 ---
 
-Because there's a new adaptyv protein design competition starting soon, I thought I'd try to learn a bit about how AI is used to generate binders for proteins. A good first step here is to use the recent GEM/Adaptyv RBX1 competition to try a couple of things: 1. Making a pipeline for generating binders and 2. Find out how binders are selected for experimental testing.
+There's a new adaptyv protein design competition starting soon and I thought I'd try to learn a bit about how AI is used to generate binders for proteins. A good first step here is to use the recent GEM/Adaptyv RBX1 competition to try a couple of things: 1. Making a pipeline for generating binders and 2. Find out how binders are selected for experimental testing.
 
 By the end we will see some metrics that correlate with expression and binding, and see if a proposed set of gating criteria would have been effective in this challenge.
 
