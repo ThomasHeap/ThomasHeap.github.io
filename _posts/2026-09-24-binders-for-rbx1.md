@@ -5,15 +5,32 @@ date: 2026-09-24
 custom_js: https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.1.0/3Dmol-min.js
 ---
 
-There's a new adaptyv protein design competition starting soon and I thought I'd try to learn a bit about how AI is used to generate binders for proteins. A good first step here is to use the recent GEM/Adaptyv RBX1 competition to try a couple of things: 1. Making a pipeline for generating binders and 2. Find out how binders are selected for experimental testing.
+Of the 24 metrics I computed over the 322 designs from the GEM/Adaptyv RBX1 competition, the ones that predict whether a design *expresses* are mostly not the ones that predict whether it *binds*, and several of them predict the two in opposite directions.
 
-By the end we will see some metrics that correlate with expression and binding, and see if a proposed set of gating criteria would have been effective in this challenge.
+![AUC for each metric, expression vs binding](/images/rbx1/auc-expression-vs-binding.png)
 
-RBX1 is a part of the Cullin-RING E3 ligase complex that tags other unwanted or damaged proteins for destruction and recycling. It does this through a process called ubiquitinisation, attaching a molecule called ubiquitin to mark proteins for degradation. It plays an important role in cell proliferation and thus cancer, as well as some other diseases, so makes a good target for drugging.
+The metrics are plotted in their raw direction, so distance from the dashed line at 0.5 is what's important and anything to the left of it is predicting in reverse. (The figure shows 19 of the 24; the near-duplicate aggregations are in the tables below.) There are four standout results here:
 
-However it is difficult to design binders primarily for three reasons: firstly it has this large intrinsically disordered region on the N-terminal, this protein forms part of a larger complex, and without the other subunits pinning it down this region can adopt many conformations (in fact it can still take on different conformations when part of the whole complex, which allows the complex the requisite flexibility to attach ubiquitin to many different proteins). The uncertainty in this region swamps the uncertainty on the rest of the sequence, and thus metrics like whole complex pTM or pLDDT or any other metric which doesn't restrict itself to contact residues and which is computed across the whole complex, get tanked by the disordered region even though the uncertainty in that region might not affect where we would want to bind to anyway. Secondly, on the other end of the protein it has these three zinc ions which get held in a cross-brace sort of position and which AI models usually struggle to place correctly. But without placing these correctly the RING domain won't fold right. And finally, it lacks useful evolutionary relatives or analogues, so MSA based approaches have little to go on.
+- **The two charge metrics are the only ones near the top for both.** `seq_fraction_charged` is the best expression predictor at 0.740 and is third for binding at 0.695; net charge at pH 7 is the strongest binding signal and third strongest for expression. Everything else that is good at one is mediocre or reversed at the other.
+- **Binder length, interface contacts, buried SASA and aggregation all sit below 0.5 for expression and above it for binding.** Filtering hard on expression proxies is therefore partly selecting against binding.
+- **The strongest single binding signal is net charge at pH 7**, which lands at 0.197, meaning 0.80 read in the negative direction. A plain sequence property with no structural information in it beats every interface metric here, and every `iface_*` metric except `iface_pdockq` falls within 0.07 of chance, with `iface_iptm` the furthest out at 0.561 and `iface_pdockq2` the closest in at 0.496.
+- **The best metric by AUC isn't the one I'd rank on.** This one isn't in the plot: net charge has the best AUC but an average precision of 0.088, against 0.229 for interface contacts. With a budget to test 20 designs I'd pick differently.
 
-The scale of the problem shows in the fold-prediction baselines. According to a [blog post by the winners of the competition](https://research.mandrake.bio/p/we-dont-even-design-binders), Mandrake bio, ESMFold reaches pLDDT 0.40 on this target, Protenix ab initio 0.60, Boltz-2 0.63. All of these uninformative or marginal. In adaptyv's competition out of 322 designs, only 9 bound to the target and 255 expressed.
+With 9 binders out of 322 none of this is conclusive, and I'll come back to that below. The rest of this post is how I got there: a pipeline for generating binders, and then a look at how the competition's binders would have scored against the usual selection metrics.
+
+## Why RBX1 is hard
+
+RBX1 is a part of the Cullin-RING E3 ligase complex that tags other unwanted or damaged proteins for destruction and recycling. It does this through a process called ubiquitination, attaching a molecule called ubiquitin to mark proteins for degradation. It plays an important role in cell proliferation and thus cancer, as well as some other diseases, so makes a good target for drugging.
+
+It is difficult to design binders for, though, for a few reasons.
+
+It has a large intrinsically disordered region on the N-terminal. This protein forms part of a larger complex, and without the other subunits pinning it down this region can adopt many conformations. In fact it can still take on different conformations when part of the whole complex, which allows the complex the requisite flexibility to attach ubiquitin to many different proteins. The uncertainty in this region swamps the uncertainty on the rest of the sequence, so metrics like whole complex pTM or pLDDT, or any other metric which doesn't restrict itself to contact residues and which is computed across the whole complex, get tanked by the disordered region even though the uncertainty there might not affect where we would want to bind anyway.
+
+On the other end of the protein it has three zinc ions which get held in a cross-brace sort of position and which AI models usually struggle to place correctly. Without placing these correctly the RING domain won't fold right.
+
+And finally it lacks useful evolutionary relatives or analogues, so MSA based approaches have little to go on.
+
+The scale of the problem shows in the fold-prediction baselines. According to a [blog post by the winners of the competition](https://research.mandrake.bio/p/we-dont-even-design-binders), Mandrake bio, ESMFold reaches pLDDT 0.40 on this target, Protenix ab initio 0.60, Boltz-2 0.63. All of these are uninformative or marginal. In adaptyv's competition out of 322 designs, only 9 bound to the target and 255 expressed.
 
 Mandrake's ORBIT pipeline took an approach that:
 
@@ -34,13 +51,13 @@ Adaptyv has run several of these competitions: A two stage competition aiming to
 
 In the first adaptyv competition on EGFR iPAE, ipTM and ESM-2 pseudo-likelihood were used as selection mechanisms. Also additional binders were selected to increase diversity in the final released dataset, so the above concerns are well known. One of the results that stood out to me in [their write up](https://www.biorxiv.org/content/10.1101/2025.04.17.648362v2.full.pdf) was that lumping all designs together meant that metrics that might only show significance on say, peptides, would be marked down as insignificant. In fact the winning design was completely overlooked by the above metrics. In the Nipah competition ipSAE was chosen, but it had issues in that scores would vary slightly due to random seed and this variability was not uniform across designs, which may have advantaged designs which gave more stable scores. All of this is to say that determining *in-silico* whether a design will bind is quite challenging. In a [2025 paper](https://www.biorxiv.org/content/10.1101/2025.08.14.670059v2) Overath et al. propose the following selection criteria:
 
-
 "Based on our analysis, we recommend the following actionable filtering strategies. The first involves setting one of the following thresholds for filtering designs: AF3 ipSAE_min > 0.61; AF3 ipSAE_min x interface_∆G/∆SASA < -1.5; or AF3 LIS x input_interface_shape_complementary > 0.42. The second strategy entails pre-filtering designs using input_interface_shape_complementary > 0.62 and RMSD_binder < 3.73, followed by selecting the top K designs based on AF3 ipSAE_min"
 
-I thought it would be worthwhile to see if me and Claude could build a binder generation pipeline informed somewhat by Mandrake's pipeline and then see how the 9 binders from the competition would have fared against the aforementioned metrics and selection criteria. In line with Mandrake's proposal we will use protenix in place of AF3 to calculate metrics.
+I thought it would be worthwhile to build a binder generation pipeline informed somewhat by Mandrake's pipeline and then see how the 9 binders from the competition would have fared against the aforementioned metrics and selection criteria. In line with Mandrake's proposal we will use protenix in place of AF3 to calculate metrics.
 
 ### My pipeline
-Claude code is really good at this sort of thing, the hardest part of building the pipeline was dealing with the feelings of obsolescence as it handily whipped off code it would have taken me weeks to do by hand. The pipeline ended up looking like:
+
+I used Claude Code for most of the plumbing here and specified the binding site myself. The pipeline ended up looking like:
 
 ```
 target structure + hotspot residues
@@ -61,10 +78,10 @@ target structure + hotspot residues
    feature table
 ```
 
-First we can do a few sanity checks of this pipeline, when we generate binders do they make sense, do we actually make contact with the binding site etc.
+First we can do a few sanity checks of this pipeline: when we generate binders do they make sense, do we actually make contact with the binding site etc.
 
 ### Do we make contact?
-The first question is: when we use RFDiffusion to design binders against our fold from protenix, do we actually make contact with the binding sites we specify (A74/F81/Y106, chosen somewhat arbitrarily although I excluded the disordered region)? The answer seems to be yes for at least one of the sites and "somewhat" if we want to contact all three sites? We don't necessarily need a binder to contact all 3 hotspots so contacting just one is a good sign that we are on target.
+The first question is: when we use RFDiffusion to design binders against our fold from protenix, do we actually make contact with the binding sites we specify (A74/F81/Y106, chosen somewhat arbitrarily although I excluded the disordered region)? The answer seems to be yes for at least one of the sites and "somewhat" if we want to contact all three sites. We don't necessarily need a binder to contact all 3 hotspots so contacting just one is a good sign that we are on target.
 
 
 | run | n backbones | contact >=1 hotspot | contact all 3 hotspots |
@@ -89,24 +106,22 @@ Looks pretty good, SolubleMPNN clearly does a good job at this.
 ## Evaluating the published dataset
 In the next couple of sections we will take a really crude look at what metrics predict expression and binding in the set of proposed binders released after the competition. To do this properly we should probably look more generally beyond RBX1 considering how few binders there were and deal with uncertainty and significance properly. But just to start let's see.
 
-The short version is in this plot: the metrics that separate expressors from non-expressors are mostly not the ones that separate binders from non-binders, and several of them point in opposite directions.
-
-![AUC for each metric, expression vs binding](/images/rbx1/auc-expression-vs-binding.png)
+Throughout, AUCs are reported in each metric's raw direction, except the error and energy metrics marked *(sign-flipped)*, where the raw quantity is one you want to minimise. Average precision is raw throughout, which matters for the metrics that predict in reverse. An AUC below 0.5 doesn't mean the metric is useless, it means it predicts in reverse: subtract it from 1 to get its strength in the other direction. So what matters is distance from 0.5, not whether a number is large.
 
 ### Expression (n=321, 255 expressed)
-Before a design can bind to the target it must express, meaning they must be able to be produced in the assay adaptyv used. (Note one design had no binder label). Here we have sign flipped metrics appropriately so higher AUC always means "better at this metric predicts expression better".
+Before a design can bind to the target it must express, meaning they must be able to be produced in the assay adaptyv used. (Note one design had no binder label.)
 
 | metric | AUC |
 |---|---|
 | `seq_fraction_charged` | **0.740** |
 | `binder_mean_plddt` | 0.633 |
 | `iface_pdockq2` | 0.632 |
-| `iface_ipae`  | 0.631 |
-| `struct_binding_energy`  | 0.620 |
+| `iface_ipae` *(sign-flipped)* | 0.631 |
+| `struct_binding_energy` *(sign-flipped)* | 0.620 |
 | `iface_lis` | 0.620 |
 | `iface_iptm` | 0.619 |
 | `iface_ipsae_min` | 0.614 |
-| `struct_dg_dsasa_ratio`  | 0.610 |
+| `struct_dg_dsasa_ratio` *(sign-flipped)* | 0.610 |
 | `iface_i_pdae` (symmetrised) | 0.607 |
 | `iface_ipsae` | 0.605 |
 | `iface_i_pdae_asymmetric` | 0.604 |
@@ -123,16 +138,16 @@ Before a design can bind to the target it must express, meaning they must be abl
 | `seq_net_charge_ph7` | 0.311 |
 | `seq_gravy` | 0.278 |
 
-This makes sense, the SolubleMPNN weights were shown to be very important to get binders which expressed (93% to 0% difference!!) and it tends to raise the surface charge of the proteins it predicts. Additionally plddt and iPAE, the folding models confidence in its own predictions on a per residue level and predicted aligned error respectively, which a lot of the interface metrics either directly inherit from or are correlated to, makes sense as metrics to be positively correlated with expression: If the model is more confident that it has predicted the structure right or if it predicts a lower average error when aligning on all the residues, it is probably more plausible as a real structure. Maybe... and as we will see expression doesn't guarantee binding. Another problem with these metrics is that they are, of course, biased towards proteins which already exist and that were in the training set of whichever folding model you use, and we are interested in generating and selecting novel proteins.
+This makes sense, the SolubleMPNN weights were shown to be very important to get binders which expressed (93% to 0% difference!) and it tends to raise the surface charge of the proteins it predicts.
+
+pLDDT and iPAE, the folding model's confidence in its own predictions on a per residue level and predicted aligned error respectively, are inherited by or correlated with a lot of the interface metrics. It makes sense for these to be positively correlated with expression: if the model is more confident that it has predicted the structure right, or if it predicts a lower average error when aligning on all the residues, the design is probably more plausible as a real structure. Maybe. And as we will see, expression doesn't guarantee binding.
+
+Another problem with these metrics is that they are, of course, biased towards proteins which already exist and which were in the training set of whichever folding model you use, and we are interested in generating and selecting novel proteins.
 
 
 ### Binding (n=322, 9 binders)
 
-There are far fewer binders than expressors, so these results need to be taken with a proportionally larger pinch of salt. The ROC curves for the best few metrics make the sample size obvious — with 9 positives every step is one design, and a single relabelled design moves the curve visibly.
-
-![ROC curves for the top binding predictors](/images/rbx1/roc-binding.png)
-
-(`seq_net_charge_ph7` is shown sign-flipped here, so its AUC reads 0.80 rather than the 0.197 in the table below; it is the same ordering, just pointed the other way.)
+There are far fewer binders than expressors, so these results need to be taken with a proportionally larger pinch of salt.
 
 | metric | AUC | average precision |
 |---|---|---|
@@ -161,9 +176,33 @@ There are far fewer binders than expressors, so these results need to be taken w
 | `seq_pi` | 0.312 | 0.021 |
 | `seq_net_charge_ph7` | **0.197** | 0.018 |
 
-By eye these seem to make sense, RBX1 is a pretty complicated molecule so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with, so binder length being longer seems reasonable. The metrics that dominate have a lot to do with the binding site or other things that would make a molecule better or worse at sticking to another: seq_fraction_charged is about how much of the sequence has charged residues, aggregation slides a 7 residue window over the sequence and calculates hydropathy, basically asking "is there a continuous patch with high hydrophobicity and how hydrophobic is it?", buried_sasa asks a similar question but appends "is it exposed on the outside of the molecule?" although why the simple sequence level metric that has no structural information outperforms the more sophisticated buried_sasa is a bit mysterious.
+Read by distance from 0.5, the top of this table is `seq_net_charge_ph7` at 0.197, which is 0.80 in the negative direction. More negatively charged designs bind more often, and `seq_pi` at 0.312 says the same thing from a different angle. A sequence-level property with no structural information in it is the strongest signal here, while `ipSAE_min`, `LIS`, `pDockQ2` and the rest of the `iface_*` panel that selection pipelines are usually built around all fall within 0.07 of chance, apart from `iface_pdockq`: `iface_iptm` is the furthest out at 0.561 and `iface_pdockq2` the closest in at 0.496.
 
-One other interesting thing to note is that binders tend to be more negatively charged than non-binders. In the next segment we will investigate this a bit.
+The average precision column is raw, which makes `seq_net_charge_ph7` look terrible: 0.018, under the 2.8% base rate (9 binders in 322, so that is what a random ordering scores). That is just what you get ranking by raw net charge when the binders are the negative ones. Flipped it is 0.088, about three times the base rate, but `struct_contacts` manages 0.229 and `struct_buried_sasa` 0.207. So the best metric by AUC isn't the one I'd rank on if I could only test 20 designs. AUC uses the whole ordering, AP mostly only cares about the top of it.
+
+The rest of the ordering seems reasonable by eye. RBX1 is a pretty complicated molecule, so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with, which fits binder length coming out high.
+
+The other metrics that do well all have something to do with the binding site, or with properties that make a molecule better or worse at sticking to another. `seq_fraction_charged` is about how much of the sequence has charged residues. `seq_aggregation` slides a 7 residue window over the sequence and calculates hydropathy, basically asking whether there is a continuous patch with high hydrophobicity and how hydrophobic it is. `struct_buried_sasa` asks a similar question but appends "is it exposed on the outside of the molecule?". Why the simple sequence level metric with no structural information outperforms the more sophisticated `struct_buried_sasa` is a bit mysterious.
+
+### Is any of this real?
+
+The ROC curves for four of the strongest signals, dropping `seq_pi` as a near-duplicate of net charge, make the sample size obvious: with 9 positives every step is one design, and a single relabelled design moves the curve visibly.
+
+![ROC curves for the top binding predictors](/images/rbx1/roc-binding.png)
+
+(An ROC curve has to be oriented one way, so `seq_net_charge_ph7` is drawn sign-flipped here and reads 0.80 rather than the 0.197 in the table above. Same ordering but just pointed the other way.)
+
+The bracketed numbers in the legend are 95% percentile bootstrap intervals over 10,000 resamples of the 322 designs, and they are very wide, which is a big reason not to over-read any of this. Interface contacts at 0.68 [0.49, 0.85] has an interval that reaches chance, so with nine positives it is a hint rather than anything conclusive.
+
+Those intervals are also conditional on having already chosen the metric, and I chose it by looking at 24 of them. The null standard deviation of a single AUC at this sample size is 0.097, so the right question is not whether a metric beats 0.5, it's whether it beats what the best of 24 would reach anyway. Shuffling the binder labels 200,000 times and taking the best metric in the panel each time gives the answer directly.[^panel]
+
+![Permutation null for the best metric in the panel](/images/rbx1/permutation-null.png)
+
+The bar is around 0.7, not 0.5. Only net charge clears it, at 0.803 with a family-wise p of 0.015. Binder length (0.725) and fraction charged (0.695) sit inside the null, which means I can't separate them from noise here.
+
+[^panel]: I can only shuffle 15 of the 24 metrics as I didn't save all the results I needed, but missing metrics can only raise the bar, and it rises fastest when they share nothing with the ones I do have. Adding nine completely unrelated metrics puts it at 0.70 at worst, where net charge still passes (p = 0.026) and binder length and fraction charged still don't (0.33 and 0.59).
+
+The charge result is the one worth looking at further, so that's the next section.
 
 ### So if the binders are negatively charged...
 
@@ -257,7 +296,7 @@ The winning binder definitely looks more complicated than both of the ones I gen
 
 ### Some final thoughts
 
-It would be cool if in future competitions the design structures and predicted co-folds could be included, perhaps along with predicted epitope. I don't think it would be that much to ask competitors to include this and would be a useful tool for analysis. For instance, I'm interested to know where binders were predicted to land on RBX1 by the competitors' pipelines and how this prediction would differ using my own pipeline.  
+It would be cool if in future competitions the design structures and predicted co-folds could be included, perhaps along with predicted epitope. I don't think it would be that much to ask competitors to include this and would be a useful tool for analysis. For instance, I'm interested to know where binders were predicted to land on RBX1 by the competitors' pipelines and how this prediction would differ using my own pipeline.
 
 Based on my own pipeline only 4/9 of the binders make any contact with my chosen sites (A74/F81/Y106) and the best binder from Mandrake makes significant contact with the disordered region that I ruled out (without thinking about it too much). Again this can only be trusted so far since we don't know what the competitors models predicted, nor do we know where the binder actually lands in vitro.
 
