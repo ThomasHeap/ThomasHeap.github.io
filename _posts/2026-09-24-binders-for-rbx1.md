@@ -9,7 +9,7 @@ There's a new adaptyv protein design competition starting soon and I thought I'd
 
 By the end we will see some metrics that correlate with expression and binding, and see if a proposed set of gating criteria would have been effective in this challenge.
 
-RBX1 is a part of the Cullin-RING E3 ligase complex that tags other unwanted or damaged proteins for destruction and recycling. It does this through a process called ubiquitinisation, attaching a molecule called ubiquitin to mark proteins for degradation. It plays an important role in cell proliferation and thus cancer, as well as some other diseases, so makes a good target for drugging. 
+RBX1 is a part of the Cullin-RING E3 ligase complex that tags other unwanted or damaged proteins for destruction and recycling. It does this through a process called ubiquitinisation, attaching a molecule called ubiquitin to mark proteins for degradation. It plays an important role in cell proliferation and thus cancer, as well as some other diseases, so makes a good target for drugging.
 
 However it is difficult to design binders primarily for three reasons: firstly it has this large intrinsically disordered region on the N-terminal, this protein forms part of a larger complex, and without the other subunits pinning it down this region can adopt many conformations (in fact it can still take on different conformations when part of the whole complex, which allows the complex the requisite flexibility to attach ubiquitin to many different proteins). The uncertainty in this region swamps the uncertainty on the rest of the sequence, and thus metrics like whole complex pTM or pLDDT or any other metric which doesn't restrict itself to contact residues and which is computed across the whole complex, get tanked by the disordered region even though the uncertainty in that region might not affect where we would want to bind to anyway. Secondly, on the other end of the protein it has these three zinc ions which get held in a cross-brace sort of position and which AI models usually struggle to place correctly. But without placing these correctly the RING domain won't fold right. And finally, it lacks useful evolutionary relatives or analogues, so MSA based approaches have little to go on.
 
@@ -28,9 +28,9 @@ This last point is the most interesting to me, we can look at which properties a
 1. The designs come pre-filtered, only the designs which passed selection make it into the datasets, so any analysis you do automatically loses power
 2. The selection can change between competitions, for instance in the Nipah competition they selected 600 designs based on Boltz-2 ipSAE, 400 selected by a panel of experts, and 200 chosen by community vote.
 3. Before even making it to the selection stage, designs are prefiltered by the contestants using various filters, [some may even experimentally test their designs before submission](https://x.com/sokrypton/status/1998208058632351861).
-4. The selection metrics are biased towards certain structural motifs, α-helical proteins for instance, which further biases any analysis. 
+4. The selection metrics are biased towards certain structural motifs, α-helical proteins for instance, which further biases any analysis.
 
-Adaptyv has run several of these competitions: A two stage competition aiming to find binders for EGFR, one aiming for binders of the Nipah virus, and the aforementioned RBX1 competition. 
+Adaptyv has run several of these competitions: A two stage competition aiming to find binders for EGFR, one aiming for binders of the Nipah virus, and the aforementioned RBX1 competition.
 
 In the first adaptyv competition on EGFR iPAE, ipTM and ESM-2 pseudo-likelihood were used as selection mechanisms. Also additional binders were selected to increase diversity in the final released dataset, so the above concerns are well known. One of the results that stood out to me in [their write up](https://www.biorxiv.org/content/10.1101/2025.04.17.648362v2.full.pdf) was that lumping all designs together meant that metrics that might only show significance on say, peptides, would be marked down as insignificant. In fact the winning design was completely overlooked by the above metrics. In the Nipah competition ipSAE was chosen, but it had issues in that scores would vary slightly due to random seed and this variability was not uniform across designs, which may have advantaged designs which gave more stable scores. All of this is to say that determining *in-silico* whether a design will bind is quite challenging. In a [2025 paper](https://www.biorxiv.org/content/10.1101/2025.08.14.670059v2) Overath et al. propose the following selection criteria:
 
@@ -89,6 +89,10 @@ Looks pretty good, SolubleMPNN clearly does a good job at this.
 ## Evaluating the published dataset
 In the next couple of sections we will take a really crude look at what metrics predict expression and binding in the set of proposed binders released after the competition. To do this properly we should probably look more generally beyond RBX1 considering how few binders there were and deal with uncertainty and significance properly. But just to start let's see.
 
+The short version is in this plot: the metrics that separate expressors from non-expressors are mostly not the ones that separate binders from non-binders, and several of them point in opposite directions.
+
+![AUC for each metric, expression vs binding](/images/rbx1/auc-expression-vs-binding.png)
+
 ### Expression (n=321, 255 expressed)
 Before a design can bind to the target it must express, meaning they must be able to be produced in the assay adaptyv used. (Note one design had no binder label). Here we have sign flipped metrics appropriately so higher AUC always means "better at this metric predicts expression better".
 
@@ -119,12 +123,16 @@ Before a design can bind to the target it must express, meaning they must be abl
 | `seq_net_charge_ph7` | 0.311 |
 | `seq_gravy` | 0.278 |
 
-This makes sense, the SolubleMPNN weights were shown to be very important to get binders which expressed (93% to 0% difference!!) and it tends to raise the surface charge of the proteins it predicts. Additionally plddt and iPAE, the folding models confidence in its own predictions on a per residue level and predicted aligned error respectively, which a lot of the interface metrics either directly inherit from or are correlated to, makes sense as metrics to be positively correlated with expression: If the model is more confident that it has predicted the structure right or if it predicts a lower average error when aligning on all the residues, it is probably more plausible as a real structure. Maybe... and as we will see expression doesn't guarantee binding. Another problem with these metrics is that they are, of course, biased towards proteins which already exist and that were in the training set of whichever folding model you use, and we are interested in generating and selecting novel proteins. 
+This makes sense, the SolubleMPNN weights were shown to be very important to get binders which expressed (93% to 0% difference!!) and it tends to raise the surface charge of the proteins it predicts. Additionally plddt and iPAE, the folding models confidence in its own predictions on a per residue level and predicted aligned error respectively, which a lot of the interface metrics either directly inherit from or are correlated to, makes sense as metrics to be positively correlated with expression: If the model is more confident that it has predicted the structure right or if it predicts a lower average error when aligning on all the residues, it is probably more plausible as a real structure. Maybe... and as we will see expression doesn't guarantee binding. Another problem with these metrics is that they are, of course, biased towards proteins which already exist and that were in the training set of whichever folding model you use, and we are interested in generating and selecting novel proteins.
 
 
 ### Binding (n=322, 9 binders)
 
-There are far fewer binders than expressors, so these results need to be taken with a proportionally larger pinch of salt.
+There are far fewer binders than expressors, so these results need to be taken with a proportionally larger pinch of salt. The ROC curves for the best few metrics make the sample size obvious — with 9 positives every step is one design, and a single relabelled design moves the curve visibly.
+
+![ROC curves for the top binding predictors](/images/rbx1/roc-binding.png)
+
+(`seq_net_charge_ph7` is shown sign-flipped here, so its AUC reads 0.80 rather than the 0.197 in the table below; it is the same ordering, just pointed the other way.)
 
 | metric | AUC | average precision |
 |---|---|---|
@@ -153,7 +161,7 @@ There are far fewer binders than expressors, so these results need to be taken w
 | `seq_pi` | 0.312 | 0.021 |
 | `seq_net_charge_ph7` | **0.197** | 0.018 |
 
-By eye these seem to make sense, RBX1 is a pretty complicated molecule so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with, so binder length being longer seems reasonable. The metrics that dominate have a lot to do with the binding site or other things that would make a molecule better or worse at sticking to another: seq_fraction_charged is about how much of the sequence has charged residues, aggregation slides a 7 residue window over the sequence and calculates hydropathy, basically asking "is there a continuous patch with high hydrophobicity and how hydrophobic is it?", buried_sasa asks a similar question but appends "is it exposed on the outside of the molecule?" although why the simple sequence level metric that has no structural information outperforms the more sophisticated buried_sasa is a bit mysterious. 
+By eye these seem to make sense, RBX1 is a pretty complicated molecule so minimal scaffolds like minibinders may struggle to attach whereas a larger properly folded molecule has more to work with, so binder length being longer seems reasonable. The metrics that dominate have a lot to do with the binding site or other things that would make a molecule better or worse at sticking to another: seq_fraction_charged is about how much of the sequence has charged residues, aggregation slides a 7 residue window over the sequence and calculates hydropathy, basically asking "is there a continuous patch with high hydrophobicity and how hydrophobic is it?", buried_sasa asks a similar question but appends "is it exposed on the outside of the molecule?" although why the simple sequence level metric that has no structural information outperforms the more sophisticated buried_sasa is a bit mysterious.
 
 One other interesting thing to note is that binders tend to be more negatively charged than non-binders. In the next segment we will investigate this a bit.
 
@@ -166,7 +174,7 @@ It makes sense at this point to ask the obvious question: Is there some physical
 | actual_site_net_charge (all real contacts) | -0.781 | -0.782 | 0.597 | 0.3211 |
 | actual_site_net_charge (ordered contacts only, excl. 1-39) | -1.052 | -0.783 | 0.473 | 0.7765 |
 
-So if we trust the locations these binders end up using my pipeline (big if), then there isn't really any significant signal either way and it isn't clear why lower charged proposed binders are more likely to be successful. 
+So if we trust the locations these binders end up using my pipeline (big if), then there isn't really any significant signal either way and it isn't clear why lower charged proposed binders are more likely to be successful.
 
 
 ### Which binders would survive Overath et al.'s filter
@@ -260,4 +268,3 @@ Some questions I think I'll try to answer for the next competition:
 3. Can I replicate Mandrake's unpublished pipeline based on their blog post?
 4. Given a set of binders and some metrics how do I best select and rank them?
 5. How do I iterate on a pipeline like this to generate better binders?
-
